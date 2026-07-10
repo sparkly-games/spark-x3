@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Spark</title>
+
+    <link rel="icon" href="spark.png" type="image/png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="headerInject.js" defer></script>
+    <script src="cardInjects.js" defer></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Hero -->
+    <section class="flex flex-col items-center justify-center min-h-[70vh] px-6 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+            Welcome to Spark
+        </h1>
+        <p class="max-w-2xl text-lg text-gray-600 mb-8">
+            Empowering the next generation of learners with innovative educational
+            solutions designed for modern classrooms.
+        </p>
+        <a
+            href="/#solutions"
+            class="bg-blue-600 hover:bg-blue-700 transition text-white font-medium px-6 py-3 rounded-lg shadow-lg"
+        >
+            Learn More
+        </a>
+    </section>
+
+    <!-- Solutions -->
+    <section class="py-16" id="solutions">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold">
+                    Our Solutions
+                </h2>
+                <span class="text-sm text-gray-500">
+                    Student Portal
+                </span>
+            </div>
+            <div class="grid gap-6 md:grid-cols-3" id="card-container">
+                <!-- Cards will be injected here -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>
