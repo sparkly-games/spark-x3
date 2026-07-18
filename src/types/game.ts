@@ -4,13 +4,11 @@ export interface Game {
 
   poster: string;
   hero?: string;
+  featured?: boolean;
 
   description: string;
 
   rating: number;
-
-  plays: number;
-  saves: number;
 
   tags: string[];
 }

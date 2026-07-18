@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ride Sims</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #422c2c;
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1600px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.warning {
+    display: inline-block;
+    background: #751616;
+    color: #ff3c3c;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.banner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+    gap: 20px;
+}
+
+.game-card {
+    background: #333;
+    border-radius: 12px;
+    padding: 18px;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,.35);
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+}
+
+.game-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.game-card h2 {
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.game-card p {
+    color: #bbb;
+    margin-top: 6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="warning">
+        This page has not been tested or fully implemented.
+    </div>
+
+    <img
+        class="banner"
+        src="./launcherAssets/ridesims.webp"
+        alt="Ride Sims"
+    >
+
+    <div class="games" id="games"></div>
+
+</div>
+
+<script>
+const games = [
+    { name: "rush", difficulty: "Moderate" },
+    { name: "vampire", difficulty: "Easy" },
+    { name: "stealth", difficulty: "Easy" },
+    { name: "cosmic-rewind", difficulty: "Hard", display: "Cosmic Rewind" },
+    { name: "hyperia", difficulty: "Easy" },
+    { name: "galactica", difficulty: "Easy" },
+    { name: "the-swarm", difficulty: "Easy", display: "The Swarm" },
+    { name: "the-smiler", difficulty: "Easy", display: "The Smiler" },
+    { name: "rita", difficulty: "Easy" },
+    { name: "oblivion", difficulty: "Moderate" },
+    { name: "nemesis", difficulty: "Easy" },
+    { name: "thirteen", difficulty: "Easy", display: "Th13teen" },
+    { name: "spinball-whizzer", difficulty: "Moderate", display: "Spinball Whizzer" },
+    { name: "saw", difficulty: "Moderate", display: "SAW: The Ride" },
+    { name: "hex", difficulty: "Easy", display: "Hex: The Legend of the Towers" },
+    { name: "icon", difficulty: "Moderate" },
+    { name: "wickerman", difficulty: "Easy" },
+    { name: "zufari", difficulty: "Moderate" }
+];
+
+games.sort((a, b) => a.name.localeCompare(b.name));
+
+const container = document.getElementById("games");
+
+games.forEach(game => {
+
+    const card = document.createElement("div");
+    card.className = "game-card";
+
+    card.onclick = () => {
+        window.location.href = `${game.name}/flash.html`;
+    };
+
+    card.innerHTML = `
+        <img src="./launcherAssets/${game.name}.webp" alt="${game.display || game.name}">
+        <h2>${game.display || game.name.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())}</h2>
+        <p>${game.difficulty}</p>
+    `;
+
+    container.appendChild(card);
+
+});
+</script>
+
+</body>
+</html>
