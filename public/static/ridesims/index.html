@@ -93,7 +93,7 @@ body {
 
     <img
         class="banner"
-        src="./launcherAssets/ridesims.webp"
+        src="/static/ridesims/launcherAssets/ridesims.webp"
         alt="Ride Sims"
     >
 
@@ -133,11 +133,11 @@ games.forEach(game => {
     card.className = "game-card";
 
     card.onclick = () => {
-        window.location.href = `${game.name}/flash.html`;
+        window.location.href = `/static/ridesims/${game.name}/flash.html`;
     };
 
     card.innerHTML = `
-        <img src="./launcherAssets/${game.name}.webp" alt="${game.display || game.name}">
+        <img src="/static/ridesims/launcherAssets/${game.name}.webp" alt="${game.display || game.name}">
         <h2>${game.display || game.name.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())}</h2>
         <p>${game.difficulty}</p>
     `;
