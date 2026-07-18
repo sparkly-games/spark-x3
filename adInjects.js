@@ -1,0 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+    document.head.insertAdjacentHTML("beforeend", `
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+    `)
+})

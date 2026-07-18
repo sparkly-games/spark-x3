@@ -2,7 +2,7 @@ const cards = [
     {
         ref: "sparxscience",
         description: "Explore the wonders of science and how it shapes our world.",
-    //  disabled: true
+        disabled: true
     },
     {
         ref: "sparxreader",
@@ -10,7 +10,8 @@ const cards = [
     },
     {
         ref: "sparxmaths",
-        description: "Visit the world of mathematics and discover its beauty and logic."
+        description: "Visit the world of mathematics and discover its beauty and logic.",
+        disabled: true
     }
 ];
 
