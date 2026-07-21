@@ -67,10 +67,6 @@ export default function Info() {
                 />
                 Play Now
               </button>
-
-              <button className="rounded-lg border border-zinc-700 px-8 py-3 hover:bg-zinc-900">
-                Add to Favourites
-              </button>
             </div>
           </div>
         </div>
