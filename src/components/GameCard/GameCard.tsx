@@ -1,5 +1,5 @@
 import type { Game } from "../../types/game";
-import { Info, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import GamePoster from "../GamePoster/GamePoster";
 
