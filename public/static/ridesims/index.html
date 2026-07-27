@@ -120,7 +120,14 @@ const games = [
     { name: "hex", difficulty: "Easy", display: "Hex: The Legend of the Towers" },
     { name: "icon", difficulty: "Moderate" },
     { name: "wickerman", difficulty: "Easy" },
-    { name: "zufari", difficulty: "Moderate" }
+    { name: "zufari", difficulty: "Moderate" },
+    { name: "apocalypse", difficulty: "Hard" },
+    { name: "hollywood-action-tower", difficulty: "Moderate" },
+    { name: "duel", difficulty: "Easy" },
+    { name: "inferno", difficulty: "Easy", display: "Nemesis Inferno" },
+    { name: "maelstrom", difficulty: "Moderate" },
+    { name: "ripsaw", difficulty: "Hard" },
+    // { name: "", difficulty: "Easy" },
 ];
 
 games.sort((a, b) => a.name.localeCompare(b.name));
@@ -137,10 +144,31 @@ games.forEach(game => {
     };
 
     card.innerHTML = `
-        <img src="/static/ridesims/launcherAssets/${game.name}.webp" alt="${game.display || game.name}">
+        <img alt="${game.display || game.name}">
         <h2>${game.display || game.name.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())}</h2>
         <p>${game.difficulty}</p>
     `;
+
+    const img = card.querySelector("img");
+
+    const formats = ["webp", "png", "jpg"];
+    let index = 0;
+
+    function loadImage() {
+        img.src = `/static/ridesims/launcherAssets/${game.name}.${formats[index]}`;
+    }
+
+    img.onerror = () => {
+        index++;
+        if (index < formats.length) {
+            loadImage();
+        } else {
+            // Optional placeholder if none exist
+            img.src = "/static/ridesims/launcherAssets/placeholder.png";
+        }
+    };
+
+    loadImage();
 
     container.appendChild(card);
 

@@ -22,7 +22,7 @@ export default function GameCard({ game }: Props) {
         duration-300
         hover:w-60
       "
-      onClick={() => navigate(`/game/${game.id}`)}
+      onClick={() => navigate(`/play/${game.id}`)}
     >
       <div
         className="
@@ -66,35 +66,6 @@ export default function GameCard({ game }: Props) {
           />
         </button>
 
-        {/* Info button */}
-        <button
-          type="button"
-          className="
-            absolute
-            right-3
-            top-3
-            z-30
-            flex
-            h-9
-            w-9
-            items-center
-            justify-center
-            rounded-full
-            bg-black/60
-            opacity-0
-            transition-opacity
-            duration-200
-            group-hover:opacity-100
-            hover:bg-white
-            hover:text-black
-          "
-          onClick={(e) => {
-            e.stopPropagation();
-            navigate(`/game/${game.id}`);
-          }}
-        >
-          <Info size={18} />
-        </button>
       </div>
 
       <div className="mt-2">
