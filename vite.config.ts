@@ -7,7 +7,7 @@ const rewrites = {
   configureServer(server: any) {
     console.log("Rewrite plugin loaded");
 
-    server.middlewares.use((req, _res, next) => {
+    server.middlewares.use((req: any, _res: any, next: any) => {
 
       if (req.url) {
         const [path, query = ""] = req.url.split("?");
