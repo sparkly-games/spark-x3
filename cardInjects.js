@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <a
                 href="${card.disabled ? "#" : `http://${card.ref}.${window.location.hostname}`}"
                 ${card.disabled ? 'aria-disabled="true"' : ""}
-                class="group bg-white rounded-xl shadow p-6 transition
+                class="group rounded-xl border border-gray-700 bg-[#1C2128] p-6 shadow-lg transition
                     ${card.disabled
                         ? "opacity-50 cursor-not-allowed pointer-events-none"
-                        : "hover:shadow-xl hover:-translate-y-1"}"
+                        : "hover:-translate-y-1 hover:border-blue-500 hover:shadow-2xl"}"
             >
                 <div class="flex justify-between items-start">
                     <div>
@@ -34,18 +34,20 @@ document.addEventListener("DOMContentLoaded", () => {
                             Reference
                         </p>
 
-                        <h3 class="text-2xl font-semibold mt-2">
+                        <h3 class="mt-2 text-2xl font-semibold text-white">
                             ${card.ref}
                         </h3>
 
-                        <p class="mt-4 text-gray-500 text-sm">
+                        <p class="mt-4 text-sm text-gray-300">
                             ${card.description}
                         </p>
                     </div>
 
-                    <div class="w-11 h-11 rounded-full bg-gray-900 text-white flex items-center justify-center transition ${card.disabled ? "" : "group-hover:bg-blue-600"}">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#161B22] text-white transition ${
+                        card.disabled ? "" : "group-hover:bg-blue-600"
+                    }">
                         <svg xmlns="http://www.w3.org/2000/svg"
-                             class="w-5 h-5"
+                             class="h-5 w-5"
                              fill="none"
                              viewBox="0 0 24 24"
                              stroke="currentColor"
