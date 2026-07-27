@@ -11,6 +11,7 @@ export default function Navbar() {
       w-full
       items-center
       justify-between
+      flex-row
       bg-zinc-950/80
       px-8
       backdrop-blur
@@ -24,42 +25,24 @@ export default function Navbar() {
         Spark X3
       </h1>
 
-      <input
-        placeholder="Search games..."
-        className="
-          rounded-lg
-          bg-zinc-900
-          px-4
-          py-2
-          outline-none
-        "
-      />
-
       <div>
         <button className="
           mr-4
           rounded-lg
           bg-zinc-900
           px-4
+          cursor-pointer
           py-2
-        ">
+        " onClick={() => { open("https://sc.bloat.cat/") }}>
           <Headphones />
-        </button>
-        <button className="
-          mr-4
-          rounded-lg
-          bg-zinc-900
-          px-4
-          py-2
-        ">
-          <Tv />
         </button>
         <button className="
           rounded-lg
           bg-sky-400
           px-4
           py-2
-        ">
+          opacity-30
+        " disabled aria-disabled>
           <User />
         </button>
       </div>

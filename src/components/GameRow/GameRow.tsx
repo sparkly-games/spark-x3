@@ -23,10 +23,9 @@ export default function GameRow({ title, games }: Props) {
       <div
         className="
           flex
-          gap-5
+          gap-3
           overflow-x-auto
           overflow-y-visible
-          pb-8
           scrollbar-hide
         "
       >

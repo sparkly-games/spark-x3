@@ -19,7 +19,7 @@ export default function Home() {
     >
       <Navbar />
 
-      <div className="pt-20 px-8">
+      <div className="pt-20 px-8 pb-20">
         {tags.map((tag) => {
           const taggedGames = games.filter((game) =>
             game.tags.includes(tag)

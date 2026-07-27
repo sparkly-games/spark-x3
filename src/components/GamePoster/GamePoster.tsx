@@ -1,9 +1,12 @@
+import { useState } from "react";
+
 interface Props {
   src: string;
   alt: string;
 }
 
 export default function GamePoster({ src, alt }: Props) {
+  const [source, setSource] = useState<string>(src);
   return (
     <>
       {/* Blurred background fill */}
@@ -26,7 +29,8 @@ export default function GamePoster({ src, alt }: Props) {
 
       {/* Main poster */}
       <img
-        src={src}
+        src={source}
+        onError={() => setSource("/posters/placeholder.png")}
         alt={alt}
         loading="lazy"
         className="

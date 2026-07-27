@@ -54,6 +54,7 @@ export default function GameCard({ game }: Props) {
             transition-opacity
             duration-200
             group-hover:opacity-100
+            cursor-pointer
           "
           onClick={(e) => {
             e.stopPropagation();
