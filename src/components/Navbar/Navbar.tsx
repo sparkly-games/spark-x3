@@ -1,4 +1,4 @@
-import { Headphones, Tv, User } from "lucide-react";
+import { Headphones, User } from "lucide-react";
 
 export default function Navbar() {
   return (
