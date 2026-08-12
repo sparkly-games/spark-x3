@@ -71,4 +71,11 @@ export const games: Game[] = [
     description: "Swing through challenging levels using your grappling hook and reach the finish line.",
     tags: ["Platformer", "Action"]
   },
+  {
+    id: "tiny-fishing",
+    title: "Tiny Fishing",
+    poster: "/images/games/tinyfishing.png",
+    description: "Cast your line, reel in a variety of fish and become the ultimate angler.",
+    tags: ["Simulation", "Adventure"]
+  }
 ];
