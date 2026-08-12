@@ -1,17 +1,17 @@
-THIS FOLDER IS A MOCK API WHICH ENABLES RIDESIMS TO WORK.
+# Mock API Folder
 
--------------------------------------------------------------
+> **THIS FOLDER IS A MOCK API WHICH ENABLES RIDESIMS TO WORK.**
 
-id=100000&username=Username&userLevel=0&result=success
+---
 
--------------------------------------------------------------
+`id=100000&username=Username&userLevel=0&result=success`
 
-THE USERNAME CAN BE CHANGED AND IT WILL BE DISPLAYED IN-GAME.
+---
 
-DO NOT:
+The **username** can be changed, and it will be displayed in-game.
 
-- Move
-- Delete
-- Modify (in any way other than above)
+## **DO NOT:**
 
-THIS FOLDER.
+- Move this folder.
+- Delete this folder.
+- Modify this folder in any way other than changing the username.

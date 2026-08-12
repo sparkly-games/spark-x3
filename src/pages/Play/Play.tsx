@@ -21,72 +21,151 @@ export default function Play() {
 
   return (
     <div className="flex min-h-screen flex-col bg-zinc-950 text-white">
-      {/* Header */}
-      <header className="flex items-center justify-between border-b border-zinc-800 bg-zinc-950/80 px-6 py-4 backdrop-blur">
-        <div className="flex items-center gap-4">
+      {/* Game toolbar */}
+      <header
+        className="
+          flex
+          h-14
+          shrink-0
+          items-center
+          justify-between
+          border-b
+          border-zinc-700
+          bg-zinc-900
+          px-4
+        "
+      >
+        <div className="flex min-w-0 items-center gap-2">
           <button
+            type="button"
             onClick={() => navigate(-1)}
-            className="rounded-lg p-2 transition hover:bg-zinc-800"
+            title="Back"
+            className="
+              flex
+              h-9
+              w-9
+              shrink-0
+              cursor-pointer
+              items-center
+              justify-center
+              rounded
+              border
+              border-zinc-700
+              bg-zinc-800
+              text-zinc-300
+              transition
+              hover:bg-zinc-700
+              hover:text-white
+            "
             aria-label="Go back"
           >
-            <ArrowLeft size={22} />
+            <ArrowLeft size={18} />
           </button>
 
-          <div>
-            <h1 className="font-bold">
+          <div className="ml-2 min-w-0">
+            <h1 className="truncate text-sm font-bold">
               {game?.title ?? id}
             </h1>
 
-            <p className="text-sm text-zinc-400">
+            <p className="text-xs text-zinc-500">
               Playing now
             </p>
           </div>
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <button
+            type="button"
             onClick={() => navigate("/")}
-            className="flex items-center gap-2 rounded-lg bg-zinc-800 px-4 py-2 transition hover:bg-zinc-700"
+            className="
+              flex
+              h-9
+              items-center
+              gap-2
+              rounded
+              border
+              border-zinc-700
+              bg-zinc-800
+              px-3
+              text-sm
+              font-medium
+              text-zinc-300
+              transition
+              hover:bg-zinc-700
+              hover:text-white
+            "
           >
-            <Home size={18} />
+            <Home size={16} />
             Home
           </button>
 
           <button
+            type="button"
             onClick={enterFullscreen}
-            className="flex items-center gap-2 rounded-lg bg-white px-4 py-2 font-semibold text-black transition hover:scale-105"
+            className="
+              flex
+              h-9
+              items-center
+              gap-2
+              rounded
+              border
+              border-sky-500
+              bg-sky-500
+              px-3
+              text-sm
+              font-semibold
+              text-white
+              transition
+              hover:bg-sky-400
+            "
           >
-            <Maximize size={18} />
+            <Maximize size={16} />
             Fullscreen
           </button>
         </div>
       </header>
 
-
       {/* Game area */}
-      <main className="relative flex flex-1 items-center justify-center p-4">
-        {loading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-zinc-950">
-            <p className="animate-pulse text-zinc-400">
-              Loading game...
-            </p>
-          </div>
-        )}
+      <main className="flex flex-1 items-center justify-center bg-black p-3">
+        <div className="relative h-full w-full overflow-hidden border border-zinc-800 bg-black">
+          {loading && (
+            <div
+              className="
+                absolute
+                inset-0
+                z-10
+                flex
+                items-center
+                justify-center
+                bg-zinc-950
+              "
+            >
+              <div className="text-center">
+                <div className="mb-2 text-sm font-semibold">
+                  Loading game
+                </div>
 
-        <iframe
-          src={`/static/${id}/index.html`}
-          title={game?.title ?? id}
-          onLoad={() => setLoading(false)}
-          className="
-            h-[calc(100vh-88px)]
-            w-full
-            margin-2
-            rounded-xl
-            border
-            border-zinc-800
-            bg-black
-          "
-        />
+                <div className="text-xs text-zinc-500">
+                  Please wait...
+                </div>
+              </div>
+            </div>
+          )}
+
+          <iframe
+            src={`/static/${id}/index.html`}
+            title={game?.title ?? id}
+            onLoad={() => setLoading(false)}
+            className="
+              h-full
+              min-h-[calc(100vh-80px)]
+              w-full
+              border-0
+              bg-black
+            "
+            allow="fullscreen; autoplay"
+          />
+        </div>
       </main>
     </div>
   );

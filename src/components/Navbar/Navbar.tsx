@@ -2,51 +2,91 @@ import { Headphones, User } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="
-      fixed
-      top-0
-      z-50
-      flex
-      h-16
-      w-full
-      items-center
-      justify-between
-      flex-row
-      bg-zinc-950/80
-      px-8
-      backdrop-blur
-    ">
-
-      <h1 className="
-        text-2xl
-        font-bold
-        text-sky-400
-      ">
-        Spark X3
-      </h1>
-
-      <div>
-        <button className="
-          mr-4
-          rounded-lg
-          bg-zinc-900
-          px-4
+    <nav
+      className="
+        fixed
+        top-0
+        z-50
+        flex
+        h-14
+        w-full
+        items-center
+        justify-between
+        border-b
+        border-zinc-700
+        bg-zinc-900
+        px-5
+      "
+    >
+      {/* Logo */}
+      <button
+        type="button"
+        className="
           cursor-pointer
-          py-2
-        " onClick={() => { open("https://sc.bloat.cat/") }}>
-          <Headphones />
+          text-xl
+          font-bold
+          text-sky-400
+          transition
+          hover:text-sky-300
+        "
+        onClick={() => {
+          window.location.href = "/";
+        }}
+      >
+        Spark X3
+      </button>
+
+      {/* Navigation */}
+      <div className="flex items-center gap-2">
+        <button
+          type="button"
+          title="Music"
+          className="
+            flex
+            h-9
+            w-9
+            cursor-pointer
+            items-center
+            justify-center
+            rounded
+            border
+            border-zinc-700
+            bg-zinc-800
+            text-zinc-300
+            transition
+            hover:border-zinc-500
+            hover:bg-zinc-700
+            hover:text-white
+          "
+          onClick={() => {
+            window.open("https://sc.bloat.cat/", "_blank");
+          }}
+        >
+          <Headphones size={18} />
         </button>
-        <button className="
-          rounded-lg
-          bg-sky-400
-          px-4
-          py-2
-          opacity-30
-        " disabled aria-disabled>
-          <User />
+
+        <button
+          type="button"
+          title="Account"
+          disabled
+          aria-disabled
+          className="
+            flex
+            h-9
+            w-9
+            cursor-not-allowed
+            items-center
+            justify-center
+            rounded
+            border
+            border-zinc-800
+            bg-zinc-800
+            text-zinc-600
+          "
+        >
+          <User size={18} />
         </button>
       </div>
-
     </nav>
   );
 }
