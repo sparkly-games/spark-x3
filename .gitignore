@@ -31,6 +31,10 @@ dist-ssr/
 *.njsproj
 *.sln
 
+*-key.pem
+
 # Vim swap files (but keep Flash files)
 *.sw?
+
+
 !*.swf

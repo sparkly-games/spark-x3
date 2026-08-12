@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import fs from 'fs';
 
 const rewrites = {
   name: "api-index-rewrite",
@@ -28,4 +29,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  server: {
+    https: {
+      key: fs.readFileSync("./localhost-key.pem"),
+      cert: fs.readFileSync("./localhost.pem")
+    }
+  }
 });
