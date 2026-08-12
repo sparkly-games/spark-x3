@@ -1,10 +1,6 @@
 import {
   LayoutDashboard,
   ShieldBan,
-  Flag,
-  Gamepad2,
-  Megaphone,
-  Activity,
   LogOut,
 } from "lucide-react";
 
