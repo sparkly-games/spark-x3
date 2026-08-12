@@ -10,9 +10,7 @@ export interface Game {
 
   featured?: boolean;
 
-  description: string;
-
-  rating: number;
+  description?: string;
 
   tags: string[];
 }

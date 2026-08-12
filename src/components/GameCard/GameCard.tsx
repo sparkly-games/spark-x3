@@ -108,9 +108,6 @@ export default function GameCard({ game }: Props) {
         </h3>
 
         <div className="mt-0.5 flex items-center justify-between">
-          <span className="text-xs text-zinc-400">
-            ⭐ {game.rating}
-          </span>
 
           <span
             className="
