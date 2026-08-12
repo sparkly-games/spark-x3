@@ -2,16 +2,13 @@ const cards = [
     {
         ref: "sparxscience",
         description: "Explore the wonders of science and how it shapes our world.",
-        disabled: true
+        disabled: true,
+        type: "gmp"
     },
     {
         ref: "sparxreader",
-        description: "Dive into a world of literature and enhance your reading experience."
-    },
-    {
-        ref: "sparxmaths",
-        description: "Visit the world of mathematics and discover its beauty and logic.",
-        disabled: true
+        description: "Dive into a world of literature and enhance your reading experience.",
+        type: "trdp"
     }
 ];
 
@@ -40,6 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <p class="mt-4 text-sm text-gray-300">
                             ${card.description}
+                        </p>
+
+                        <p class="mt-4 text-sm font-medium text-gray-400">
+                            TYPE: ${card.type}
                         </p>
                     </div>
 
