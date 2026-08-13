@@ -153,7 +153,7 @@ export default function Play() {
           )}
 
           <iframe
-            src={`/static/${id}/index.html`}
+            src={`/static/${decodeURIComponent(id)}/index.html`}
             title={game?.title ?? id}
             onLoad={() => setLoading(false)}
             className="

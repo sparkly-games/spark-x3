@@ -11,7 +11,7 @@ export default function GameCard({ game }: Props) {
   const navigate = useNavigate();
 
   const openGame = () => {
-    navigate(`/play/${game.id}`);
+    navigate(`/play/${encodeURIComponent(game.id)}`);
   };
 
   return (
