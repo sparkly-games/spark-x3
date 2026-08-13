@@ -4,12 +4,16 @@ import { Maximize, Home, ArrowLeft } from "lucide-react";
 import { games } from "../../data/games";
 
 export default function Play() {
-  const { id } = useParams();
+  let { id } = useParams();
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(true);
 
   const game = games.find((g) => g.id === id);
+
+  if ( typeof id == "undefined" ) {
+    id = "";
+  }
 
   const enterFullscreen = () => {
     const iframe = document.querySelector("iframe");
