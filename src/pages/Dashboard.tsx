@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Flag, Gamepad2, Megaphone, ShieldBan } from "lucide-react";
+import { Megaphone, ShieldBan } from "lucide-react";
 
 import { subscribeToBans, type Ban as BanType } from "../lib/bans";
 import { SITE_NAME } from "../config";
