@@ -6,9 +6,11 @@ import {
 
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import Announcements from "./pages/Announcements";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Moderation from "./pages/Moderation";
+
 
 export default function App() {
   return (
@@ -25,6 +27,7 @@ export default function App() {
         >
           <Route path="/" element={<Dashboard />} />
           <Route path="/moderation" element={<Moderation />} />
+          <Route path="/announcements" element={<Announcements />} />
         </Route>
       </Routes>
     </BrowserRouter>

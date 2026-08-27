@@ -443,3 +443,92 @@ select:focus {
     flex-direction: column;
   }
 }
+
+/* Announcements */
+
+.announcement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.announcement-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 16px;
+  background: #0b0b0d;
+  border: 1px solid #242428;
+  border-radius: 9px;
+}
+
+.announcement-reference {
+  color: #707079;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", monospace;
+  font-size: 11px;
+}
+
+.announcement-title {
+  margin-top: 6px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.announcement-message {
+  margin-top: 6px;
+  color: #aaaab2;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.announcement-meta {
+  margin-top: 5px;
+  color: #707079;
+  font-size: 12px;
+}
+
+.announcement-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.secondary-button {
+  padding: 8px 13px;
+  color: #aaaab2;
+  background: #19191e;
+  border: 1px solid #303036;
+  border-radius: 7px;
+}
+
+.secondary-button:hover {
+  color: #fff;
+  background: #242429;
+}
+
+textarea {
+  width: 100%;
+  min-height: 110px;
+  padding: 11px 13px;
+  resize: vertical;
+  color: #fff;
+  background: #0b0b0d;
+  border: 1px solid #303036;
+  border-radius: 7px;
+  outline: none;
+  font: inherit;
+  line-height: 1.5;
+}
+
+textarea:focus {
+  border-color: #66666f;
+}
+
+label small {
+  margin-top: -2px;
+  color: #707079;
+  font-size: 11px;
+}
