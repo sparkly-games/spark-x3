@@ -1,5 +1,4 @@
 import {
-  Check,
   Info,
   Megaphone,
   TriangleAlert,
@@ -7,7 +6,7 @@ import {
   CircleX,
 } from "lucide-react";
 
-import type { Announcement } from "../lib/announcements";
+import type { Announcement } from "../../lib/announcements";
 
 interface Props {
   announcements: Announcement[];
@@ -103,20 +102,19 @@ export default function AnnouncementPanel({
           </div>
         ) : (
           announcements.map((announcement) => {
-            const Icon = icons[announcement.type];
+            const Icon =
+              icons[
+                announcement.type as keyof typeof icons
+              ];
 
-            const unread =
-              unreadAnnouncements.some(
-                (item) =>
-                  item.id === announcement.id
-              );
+            const unread = unreadAnnouncements.some(
+              (item) => item.id === announcement.id
+            );
 
             return (
               <button
                 key={announcement.id}
-                onClick={() =>
-                  onRead(announcement.id)
-                }
+                onClick={() => onRead(announcement.id)}
                 className={`
                   w-full
                   border-b
