@@ -2,6 +2,7 @@ import {
   LayoutDashboard,
   ShieldBan,
   LogOut,
+  Megaphone
 } from "lucide-react";
 
 import { NavLink, Outlet } from "react-router-dom";
@@ -15,6 +16,11 @@ const navigation = [
     label: "Dashboard",
     path: "/",
     icon: LayoutDashboard,
+  },
+  {
+    label: "Announcements",
+    path: "/announcements",
+    icon: Megaphone,
   },
   {
     label: "Moderation",

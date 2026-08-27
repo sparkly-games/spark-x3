@@ -1,6 +1,5 @@
 import {
   ref,
-  push,
   set,
   remove,
   onValue,
@@ -31,9 +30,10 @@ export function subscribeToBans(
     }
 
     const bans: Ban[] = Object.entries(value).map(
-      ([id, data]) => ({
-        id,
-        ...(data as Omit<Ban, "id">),
+      ([deviceId, data]) => ({
+        id: deviceId,
+        deviceId,
+        ...(data as Omit<Ban, "id" | "deviceId">),
       })
     );
 
@@ -48,9 +48,9 @@ export async function createBan(
   reason: string,
   durationMs: number | null
 ) {
-  const banRef = push(ref(database, "bans"));
+  const banRef = ref(database, `bans/${deviceId}`);
 
-  const ban: Omit<Ban, "id"> = {
+  const ban = {
     deviceId,
     reason,
     createdAt: Date.now(),
@@ -62,9 +62,9 @@ export async function createBan(
 
   await set(banRef, ban);
 
-  return banRef.key;
+  return deviceId;
 }
 
-export async function deleteBan(id: string) {
-  await remove(ref(database, `bans/${id}`));
+export async function deleteBan(deviceId: string) {
+  await remove(ref(database, `bans/${deviceId}`));
 }

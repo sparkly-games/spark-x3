@@ -36,22 +36,6 @@ export default function Dashboard() {
         </div>
 
         <div className="stat-card">
-          <Flag />
-          <div>
-            <span>Open reports</span>
-            <strong>0</strong>
-          </div>
-        </div>
-
-        <div className="stat-card">
-          <Gamepad2 />
-          <div>
-            <span>Games</span>
-            <strong>0</strong>
-          </div>
-        </div>
-
-        <div className="stat-card">
           <Megaphone />
           <div>
             <span>Announcements</span>

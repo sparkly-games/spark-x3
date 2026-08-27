@@ -177,10 +177,6 @@ export default function Moderation() {
                   </div>
 
                   <div className="ban-meta">
-                    Device: {ban.deviceId}
-                  </div>
-
-                  <div className="ban-meta">
                     Expires: {formatDate(ban.expiresAt)}
                   </div>
                 </div>
