@@ -16,7 +16,7 @@ export default function Home() {
     ...new Set(
       games.flatMap((game) => game.tags)
     ),
-  ];
+  ].sort((a, b) => a.localeCompare(b));
 
   const [open, setOpen] = useState(false);
   const [showDeviceId, setShowDeviceId] =
