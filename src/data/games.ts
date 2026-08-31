@@ -217,15 +217,15 @@ export const games: Game[] = [
     tags: ["Sports", "Arcade"]
   },
   {
-    id: "random/basketball",
-    title: "Basketball Random",
-    poster: "/images/games/basketballrandom.png",
+    id: "random/basket",
+    title: "Basket Random",
+    poster: "/images/games/basketrandom.png",
     tags: ["Sports", "Physics"]
   },
   {
-    id: "random/volleyball",
-    title: "Volleyball Random",
-    poster: "/images/games/volleyballrandom.png",
+    id: "random/volley",
+    title: "Volley Random",
+    poster: "/images/games/volleyrandom.png",
     tags: ["Sports", "Physics"]
   },
   {
@@ -275,5 +275,11 @@ export const games: Game[] = [
     title: "Wheelie Bike",
     poster: "/images/games/wheeliebike.png",
     tags: ["Physics", "Racing"]
+  },
+  {
+    id: "jetpack-joyride",
+    title: "Jetpack Joyride",
+    poster: "/images/games/jetpackjoyride.png",
+    tags: ["Arcade", "Casual"]
   }
 ];
