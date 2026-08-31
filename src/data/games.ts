@@ -1,3 +1,5 @@
+import { type Game } from "../types/game";
+
 export const games: Game[] = [
   {
     id: "eaglercraft",
