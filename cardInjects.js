@@ -2,12 +2,13 @@ const cards = [
     {
         ref: "sparxscience",
         description: "Explore the wonders of science and how it shapes our world.",
-        disabled: true,
-        type: "gmp"
+        disabled: false,
+        type: "trdp"
     },
     {
         ref: "sparxreader",
         description: "Dive into a world of literature and enhance your reading experience.",
+        disabled: false,
         type: "trdp"
     }
 ];
