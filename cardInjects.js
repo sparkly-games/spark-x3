@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const html = `
             <a
                 href="${card.disabled ? "#" : `http://${card.ref}.${window.location.hostname}`}"
+                target="_blank"
+                rel="noopener noreferrer"
                 ${card.disabled ? 'aria-disabled="true"' : ""}
                 class="group rounded-xl border border-gray-700 bg-[#1C2128] p-6 shadow-lg transition
                     ${card.disabled
