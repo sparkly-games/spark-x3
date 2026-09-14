@@ -13,4 +13,6 @@ export interface Game {
   description?: string;
 
   tags: string[];
+
+  broken?: boolean;
 }

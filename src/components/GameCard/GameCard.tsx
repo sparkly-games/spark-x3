@@ -1,6 +1,9 @@
 import type { Game } from "../../types/game";
+
 import { Play } from "lucide-react";
+
 import { useNavigate } from "react-router-dom";
+
 import GamePoster from "../GamePoster/GamePoster";
 
 interface Props {
@@ -10,17 +13,50 @@ interface Props {
 export default function GameCard({ game }: Props) {
   const navigate = useNavigate();
 
+  const broken = game.broken ?? false;
+
+  function isBrokenGamesUnlocked() {
+    const expiresAt = Number(
+      localStorage.getItem(
+        "sparkx3:broken-games-unlock"
+      )
+    );
+
+    if (!expiresAt) {
+      return false;
+    }
+
+    if (Date.now() >= expiresAt) {
+      localStorage.removeItem(
+        "sparkx3:broken-games-unlock"
+      );
+
+      return false;
+    }
+
+    return true;
+  }
+
+  const unlocked = isBrokenGamesUnlocked();
+
+  const disabled = broken && !unlocked;
+
   const openGame = () => {
-    navigate(`/play/${encodeURIComponent(game.id)}`);
+    if (disabled) {
+      return;
+    }
+
+    navigate(
+      `/play/${encodeURIComponent(game.id)}`
+    );
   };
 
   return (
     <div
-      className="
+      className={`
         group
         w-44
         shrink-0
-        cursor-pointer
         rounded-md
         border
         border-zinc-700
@@ -29,12 +65,14 @@ export default function GameCard({ game }: Props) {
         shadow-sm
         transition
         duration-150
-        hover:-translate-y-0.5
-        hover:border-zinc-500
-        hover:bg-zinc-800
-        hover:shadow-md
-      "
+        ${
+          disabled
+            ? "cursor-not-allowed opacity-50"
+            : "cursor-pointer hover:-translate-y-0.5 hover:border-zinc-500 hover:bg-zinc-800 hover:shadow-md"
+        }
+      `}
       onClick={openGame}
+      aria-disabled={disabled}
     >
       <div
         className="
@@ -50,48 +88,49 @@ export default function GameCard({ game }: Props) {
           alt={game.title}
         />
 
-        {/* Hover play button */}
-        <div
-          className="
-            absolute
-            inset-0
-            flex
-            items-center
-            justify-center
-            bg-black/55
-            opacity-0
-            transition-opacity
-            duration-150
-            group-hover:opacity-100
-          "
-        >
-          <button
-            type="button"
-            aria-label={`Play ${game.title}`}
+        {!disabled && (
+          <div
             className="
+              absolute
+              inset-0
               flex
-              h-11
-              w-11
               items-center
               justify-center
-              rounded-full
-              bg-white
-              text-black
-              shadow-lg
-              transition
-              hover:scale-105
+              bg-black/55
+              opacity-0
+              transition-opacity
+              duration-150
+              group-hover:opacity-100
             "
-            onClick={(e) => {
-              e.stopPropagation();
-              openGame();
-            }}
           >
-            <Play
-              size={20}
-              fill="currentColor"
-            />
-          </button>
-        </div>
+            <button
+              type="button"
+              aria-label={`Play ${game.title}`}
+              className="
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-full
+                bg-white
+                text-black
+                shadow-lg
+                transition
+                hover:scale-105
+              "
+              onClick={(event) => {
+                event.stopPropagation();
+                openGame();
+              }}
+            >
+              <Play
+                size={20}
+                fill="currentColor"
+              />
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="px-1 pb-1 pt-2">
@@ -108,7 +147,6 @@ export default function GameCard({ game }: Props) {
         </h3>
 
         <div className="mt-0.5 flex items-center justify-between">
-
           <span
             className="
               text-[11px]
@@ -118,7 +156,7 @@ export default function GameCard({ game }: Props) {
               text-zinc-500
             "
           >
-            Play
+            {disabled ? "Broken" : "Play"}
           </span>
         </div>
       </div>

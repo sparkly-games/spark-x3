@@ -283,5 +283,19 @@ export const games: Game[] = [
     title: "Jetpack Joyride",
     poster: "/images/games/jetpackjoyride.png",
     tags: ["Arcade", "Casual"]
+  },
+  {
+    id: "hotline-miami",
+    title: "Hotline Miami",
+    poster: "/images/games/hotlinemiami.png",
+    broken: true,
+    tags: ["Action", "Arcade"]
+  },
+  {
+    id: "people-playground",
+    title: "People Playground",
+    poster: "/images/games/peopleplayground.png",
+    broken: true,
+    tags: ["Simulation", "Physics"]
   }
 ];
