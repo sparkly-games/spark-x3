@@ -4,6 +4,8 @@ import {
   type ReactNode,
 } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import {
   subscribeToBans,
   type Ban,
@@ -24,6 +26,7 @@ export default function ProtectedRoute({
   const [ban, setBan] = useState<Ban | null>(
     null
   );
+  const navigate = useNavigate();
 
   useEffect(() => {
     return subscribeToBans((bans) => {
@@ -40,6 +43,9 @@ export default function ProtectedRoute({
 
       setBan(matchingBan ?? null);
       setLoading(false);
+      if (!ban) {
+        navigate("/games");
+      }
     });
   }, [deviceId]);
 

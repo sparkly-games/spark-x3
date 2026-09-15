@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home/Home";
-import Play from "./pages/Play/Play";
-import { getDeviceId } from "./lib/deviceId";
-import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import Home from "./games/pages/Home/Home";
+import Play from "./games/pages/Play/Play";
+import { getDeviceId } from "./games/lib/deviceId";
+import ProtectedRoute from "./games/components/ProtectedRoute/ProtectedRoute";
 
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/games" element={<Home />} />
       <Route path="/play/:id" element={<Play />} />
     </Routes>
   );

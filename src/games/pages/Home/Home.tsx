@@ -22,6 +22,8 @@ export default function Home() {
   const [showDeviceId, setShowDeviceId] = useState(false);
   const [showUnlock, setShowUnlock] = useState(false);
 
+  const [search, setSearch] = useState("");
+
   const [unlockCode, setUnlockCode] = useState("");
   const [unlockError, setUnlockError] = useState("");
 
@@ -36,6 +38,21 @@ export default function Home() {
     markRead,
     markAllRead,
   } = useAnnouncements();
+
+  const filteredGames = games.filter((game) => {
+    const query = search.trim().toLowerCase();
+
+    if (!query) {
+      return true;
+    }
+
+    return (
+      game.title.toLowerCase().includes(query) ||
+      game.tags.some((tag) =>
+        tag.toLowerCase().includes(query)
+      )
+    );
+  });
 
   function handleGamesTap() {
     const now = Date.now();
@@ -62,7 +79,6 @@ export default function Home() {
     }
 
     // 6 hours from now.
-    // HH * MM * SS * .MS.
     const expiresAt =
       Date.now() + 6 * 60 * 60 * 1000;
 
@@ -88,7 +104,7 @@ export default function Home() {
         text-white
       "
     >
-      <Navbar />
+      <Navbar onSearch={setSearch} />
 
       <div className="mx-auto max-w-7xl px-5 pb-16 pt-20">
         {/* Welcome header */}
@@ -184,24 +200,42 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Game categories */}
-        {tags.map((tag) => {
-          const taggedGames = games.filter((game) =>
-            game.tags.includes(tag)
-          );
-
-          if (taggedGames.length === 0) {
-            return null;
-          }
-
-          return (
+        {/* Games */}
+        {search.trim() ? (
+          filteredGames.length > 0 ? (
             <GameRow
-              key={tag}
-              title={tag}
-              games={taggedGames}
+              title="Search results"
+              games={filteredGames}
             />
-          );
-        })}
+          ) : (
+            <div className="py-16 text-center">
+              <p className="text-sm text-zinc-500">
+                No games found for "{search}".
+              </p>
+            </div>
+          )
+        ) : (
+          <>
+            {/* Game categories */}
+            {tags.map((tag) => {
+              const taggedGames = games.filter(
+                (game) => game.tags.includes(tag)
+              );
+
+              if (taggedGames.length === 0) {
+                return null;
+              }
+
+              return (
+                <GameRow
+                  key={tag}
+                  title={tag}
+                  games={taggedGames}
+                />
+              );
+            })}
+          </>
+        )}
       </div>
 
       {/* Device reference modal */}

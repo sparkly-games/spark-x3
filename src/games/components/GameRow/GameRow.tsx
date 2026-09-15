@@ -10,6 +10,12 @@ interface Props {
 export default function GameRow({ title, games }: Props) {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
+  useState(() => {
+    if (title.includes("Search")) {
+      setIsCollapsed(false);
+    }
+  });
+
   return (
     <section className="mt-4">
       <div className="mb-3 flex items-center justify-between">
