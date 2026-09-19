@@ -1,0 +1,44 @@
+{
+  "tags": {
+    "action": "動作",
+    "arcade": "街機",
+    "casual": "休閒",
+    "clicker": "點擊",
+    "cooking": "烹飪",
+    "horror": "恐怖",
+    "idle": "放置",
+    "physics": "物理",
+    "platformer": "平台",
+    "puzzle": "益智",
+    "racing": "競速",
+    "running": "跑酷",
+    "simulation": "模擬",
+    "sports": "運動",
+    "strategy": "策略"
+  },
+  "pages": {
+    "home": {
+      "title": "Spark X3",
+      "games": "遊戲",
+      "subline": "直接在瀏覽器中免費玩遊戲。",
+      "noGamesPrefix": "找不到遊戲 ",
+      "deviceReference": "裝置參考",
+      "deviceReferenceHelptext": "如果您需要協助，請將此參考提供給管理員。",
+      "doneModalButtonText": "完成",
+      "unlockBrokenGames": "解鎖損壞的遊戲",
+      "unlockBrokenGamesHelptext": "輸入解鎖代碼，即可暫時存取標示為損壞的遊戲。",
+      "brokenGamesTextInputPlaceholder": "輸入解鎖代碼",
+      "unlockModalButtonText": "解鎖 6 小時",
+      "unlockErrorNoCode": "請輸入解鎖代碼。",
+      "unlockErrorInvalidCode": "無效的解鎖代碼。",
+      "searchResults": "搜尋結果"
+    },
+    "play": {
+      "playingNow": "正在遊玩",
+      "homeButtonLabel": "首頁",
+      "fullscreenButtonLabel": "全螢幕",
+      "loadingGameTextLine1": "正在載入遊戲",
+      "loadingGameTextLine2": "請稍候..."
+    }
+  }
+}

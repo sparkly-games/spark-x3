@@ -1,0 +1,44 @@
+{
+  "tags": {
+    "action": "Acción",
+    "arcade": "Arcade",
+    "casual": "Casual",
+    "clicker": "Clicker",
+    "cooking": "Cocina",
+    "horror": "Terror",
+    "idle": "Inactivo",
+    "physics": "Física",
+    "platformer": "Plataformas",
+    "puzzle": "Rompecabezas",
+    "racing": "Carreras",
+    "running": "Correr",
+    "simulation": "Simulación",
+    "sports": "Deportes",
+    "strategy": "Estrategia"
+  },
+  "pages": {
+    "home": {
+      "title": "Spark X3",
+      "games": "Juegos",
+      "subline": "Juega juegos gratis directamente en tu navegador.",
+      "noGamesPrefix": "No se encontraron juegos para ",
+      "deviceReference": "Referencia del dispositivo",
+      "deviceReferenceHelptext": "Proporciona esta referencia a un administrador si necesitas ayuda.",
+      "doneModalButtonText": "Hecho",
+      "unlockBrokenGames": "Desbloquear juegos rotos",
+      "unlockBrokenGamesHelptext": "Introduce un código de desbloqueo para acceder temporalmente a los juegos marcados como rotos.",
+      "brokenGamesTextInputPlaceholder": "Introduce el código de desbloqueo",
+      "unlockModalButtonText": "Desbloquear por 6 horas",
+      "unlockErrorNoCode": "Introduce un código de desbloqueo.",
+      "unlockErrorInvalidCode": "Código de desbloqueo no válido.",
+      "searchResults": "Resultados de la búsqueda"
+    },
+    "play": {
+      "playingNow": "Jugando ahora",
+      "homeButtonLabel": "Inicio",
+      "fullscreenButtonLabel": "Pantalla completa",
+      "loadingGameTextLine1": "Cargando juego",
+      "loadingGameTextLine2": "Por favor, espera..."
+    }
+  }
+}

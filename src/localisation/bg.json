@@ -1,0 +1,44 @@
+{
+  "tags": {
+    "action": "Екшън",
+    "arcade": "Аркада",
+    "casual": "Неангажиращи",
+    "clicker": "Кликер",
+    "cooking": "Готварски",
+    "horror": "Ужаси",
+    "idle": "Бездействие",
+    "physics": "Физика",
+    "platformer": "Платформер",
+    "puzzle": "Пъзел",
+    "racing": "Състезания",
+    "running": "Бягане",
+    "simulation": "Симулация",
+    "sports": "Спорт",
+    "strategy": "Стратегия"
+  },
+  "pages": {
+    "home": {
+      "title": "Spark X3",
+      "games": "Игри",
+      "subline": "Играйте безплатни игри директно в браузъра си.",
+      "noGamesPrefix": "Не са намерени игри за ",
+      "deviceReference": "Референция на устройството",
+      "deviceReferenceHelptext": "Предоставете тази референция на администратор, ако се нуждаете от помощ.",
+      "doneModalButtonText": "Готово",
+      "unlockBrokenGames": "Отключване на счупени игри",
+      "unlockBrokenGamesHelptext": "Въведете код за отключване, за да получите временен достъп до игри, маркирани като счупени.",
+      "brokenGamesTextInputPlaceholder": "Въведете код за отключване",
+      "unlockModalButtonText": "Отключване за 6 часа",
+      "unlockErrorNoCode": "Въведете код за отключване.",
+      "unlockErrorInvalidCode": "Невалиден код за отключване.",
+      "searchResults": "Резултати от търсенето"
+    },
+    "play": {
+      "playingNow": "Играе се в момента",
+      "homeButtonLabel": "Начало",
+      "fullscreenButtonLabel": "Цял екран",
+      "loadingGameTextLine1": "Зареждане на игра",
+      "loadingGameTextLine2": "Моля, изчакайте..."
+    }
+  }
+}
