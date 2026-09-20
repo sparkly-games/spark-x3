@@ -4,6 +4,8 @@ import AnnouncementPanel from "../../components/AnnouncementPanel/AnnouncementPa
 
 import { games } from "../../data/games";
 
+import { useLanguage } from "../../../localisation/LanguageContext";
+
 import { Key, Megaphone, Trash2 } from "lucide-react";
 
 import { useRef, useState } from "react";
@@ -12,6 +14,9 @@ import { useAnnouncements } from "../../hooks/useAnnouncements";
 import { getDeviceId } from "../../lib/deviceId";
 
 export default function Home() {
+
+  const strings = useLanguage().lang.src;
+
   const tags = [
     ...new Set(
       games.flatMap((game) => game.tags)
@@ -68,13 +73,13 @@ export default function Home() {
     const code = unlockCode.trim();
 
     if (!code) {
-      setUnlockError("Enter an unlock code.");
+      setUnlockError(strings.pages.home.unlockErrorNoCode);
       return;
     }
 
     // Replace this with your actual unlock code.
     if (code !== "CLE4N-SPRX3") {
-      setUnlockError("Invalid unlock code.");
+      setUnlockError(strings.pages.home.unlockErrorInvalidCode);
       return;
     }
 
@@ -125,7 +130,7 @@ export default function Home() {
         >
           <div>
             <h1 className="text-2xl font-bold">
-              Spark X3{" "}
+              {strings.pages.home.title}{" "}
               <span
                 onClick={handleGamesTap}
                 className="
@@ -133,12 +138,12 @@ export default function Home() {
                   select-none
                 "
               >
-                Games
+                {strings.pages.home.games}
               </span>
             </h1>
 
             <p className="mt-1 text-sm text-zinc-400">
-              Play free games directly in your browser.
+              {strings.pages.home.subline}
             </p>
           </div>
 
@@ -204,13 +209,13 @@ export default function Home() {
         {search.trim() ? (
           filteredGames.length > 0 ? (
             <GameRow
-              title="Search results"
+              title={strings.pages.home.searchResults}
               games={filteredGames}
             />
           ) : (
             <div className="py-16 text-center">
               <p className="text-sm text-zinc-500">
-                No games found for "{search}".
+                {strings.pages.home.noGamesFound} "{search.trim()}"
               </p>
             </div>
           )
@@ -271,12 +276,11 @@ export default function Home() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h2 className="text-lg font-bold">
-                  Device reference
+                  {strings.pages.home.deviceReference}
                 </h2>
 
                 <p className="mt-1 text-sm text-zinc-400">
-                  Provide this reference to an
-                  administrator if you need help.
+                  {strings.pages.home.deviceReferenceHelptext}
                 </p>
               </div>
 
@@ -367,7 +371,7 @@ export default function Home() {
                 hover:bg-zinc-200
               "
             >
-              Done
+              {strings.pages.home.close}
             </button>
           </div>
         </div>
@@ -424,12 +428,11 @@ export default function Home() {
                 </div>
 
                 <h2 className="text-lg font-bold">
-                  Unlock broken games
+                  {strings.pages.home.unlockBrokenGames}
                 </h2>
 
                 <p className="mt-1 text-sm text-zinc-400">
-                  Enter an unlock code to temporarily
-                  access games marked as broken.
+                  {strings.pages.home.unlockBrokenGamesHelptext}
                 </p>
               </div>
 
@@ -466,7 +469,7 @@ export default function Home() {
                   handleUnlock();
                 }
               }}
-              placeholder="Enter unlock code"
+              placeholder={strings.pages.home.brokenGamesTextInputPlaceholder}
               autoFocus
               className="
                 mt-5
@@ -507,7 +510,7 @@ export default function Home() {
                   hover:bg-zinc-200
                 "
               >
-                Unlock for 6 hours
+                {strings.pages.home.unlockModalButtonText}
               </button>
 
               <button

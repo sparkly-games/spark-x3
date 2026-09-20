@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "flag": "🇹🇼"
+  },
   "tags": {
     "action": "動作",
     "arcade": "街機",
@@ -11,7 +14,6 @@
     "platformer": "平台",
     "puzzle": "益智",
     "racing": "競速",
-    "running": "跑酷",
     "simulation": "模擬",
     "sports": "運動",
     "strategy": "策略"
@@ -20,25 +22,45 @@
     "home": {
       "title": "Spark X3",
       "games": "遊戲",
-      "subline": "直接在瀏覽器中免費玩遊戲。",
-      "noGamesPrefix": "找不到遊戲 ",
-      "deviceReference": "裝置參考",
-      "deviceReferenceHelptext": "如果您需要協助，請將此參考提供給管理員。",
+      "subline": "直接在瀏覽器中免費遊玩遊戲。",
+      "noGamesPrefix": "找不到符合條件的遊戲：",
+      "deviceReference": "裝置識別碼",
+      "deviceReferenceHelptext": "如果需要協助，請將此識別碼提供給管理員。",
       "doneModalButtonText": "完成",
-      "unlockBrokenGames": "解鎖損壞的遊戲",
-      "unlockBrokenGamesHelptext": "輸入解鎖代碼，即可暫時存取標示為損壞的遊戲。",
-      "brokenGamesTextInputPlaceholder": "輸入解鎖代碼",
+      "unlockBrokenGames": "解鎖故障遊戲",
+      "unlockBrokenGamesHelptext": "輸入解鎖碼，以暫時存取標記為故障的遊戲。",
+      "brokenGamesTextInputPlaceholder": "輸入解鎖碼",
       "unlockModalButtonText": "解鎖 6 小時",
-      "unlockErrorNoCode": "請輸入解鎖代碼。",
-      "unlockErrorInvalidCode": "無效的解鎖代碼。",
-      "searchResults": "搜尋結果"
+      "unlockErrorNoCode": "請輸入解鎖碼。",
+      "unlockErrorInvalidCode": "解鎖碼無效。",
+      "searchResults": "搜尋結果",
+      "close": "關閉",
+      "searchPlaceholder": "搜尋遊戲..."
     },
     "play": {
       "playingNow": "正在遊玩",
       "homeButtonLabel": "首頁",
       "fullscreenButtonLabel": "全螢幕",
       "loadingGameTextLine1": "正在載入遊戲",
-      "loadingGameTextLine2": "請稍候..."
+      "loadingGameTextLine2": "請稍候...",
+      "play": "遊玩",
+      "broken": "故障"
+    },
+    "announcements": {
+      "label": "公告",
+      "notAvailableInYourLocale": "公告目前沒有提供你的語言版本。"
+    },
+    "banScreen": {
+      "title": "SPARK X3",
+      "accessControl": "存取控制",
+      "accessRestricted": "存取受限",
+      "accessRestrictedSublineText": "此裝置已被限制存取 Spark X3。",
+      "deviceReference": "裝置識別碼",
+      "reason": "原因",
+      "reasonNotAvailable": "此語言沒有提供限制原因。",
+      "expires": "到期時間",
+      "errorHelptextLong": "如果你認為此限制是誤設的，請將上方的裝置識別碼提供給 Spark X3 管理員。",
+      "baselineBranding": "Spark X3"
     }
   }
 }

@@ -2,9 +2,13 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Maximize, Home, ArrowLeft } from "lucide-react";
 import { games } from "../../data/games";
+import { useLanguage } from "../../../localisation/LanguageContext";
 
 export default function Play() {
   let { id } = useParams();
+
+  const strings = useLanguage().lang.src;
+
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(true);
@@ -72,7 +76,7 @@ export default function Play() {
             </h1>
 
             <p className="text-xs text-zinc-500">
-              Playing now
+              {strings.pages.play.playingNow}
             </p>
           </div>
         </div>
@@ -100,7 +104,7 @@ export default function Play() {
             "
           >
             <Home size={16} />
-            Home
+            {strings.pages.play.homeButtonLabel}
           </button>
 
           <button
@@ -124,7 +128,7 @@ export default function Play() {
             "
           >
             <Maximize size={16} />
-            Fullscreen
+            {strings.pages.play.fullscreenButtonLabel}
           </button>
         </div>
       </header>
@@ -146,11 +150,11 @@ export default function Play() {
             >
               <div className="text-center">
                 <div className="mb-2 text-sm font-semibold">
-                  Loading game
+                  {strings.pages.play.loadingGameTextLine1}
                 </div>
 
                 <div className="text-xs text-zinc-500">
-                  Please wait...
+                  {strings.pages.play.loadingGameTextLine2}
                 </div>
               </div>
             </div>

@@ -12,6 +12,7 @@ import {
 } from "../../lib/bans";
 
 import BanScreen from "../BanScreen/BanScreen";
+import { useLanguage } from "../../../localisation/LanguageContext";
 
 interface Props {
   deviceId: string;
@@ -26,6 +27,8 @@ export default function ProtectedRoute({
   const [ban, setBan] = useState<Ban | null>(
     null
   );
+
+  const strings = useLanguage().lang.src;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -52,7 +55,7 @@ export default function ProtectedRoute({
   if (loading) {
     return (
       <div className="center-screen">
-        Checking access...
+        {strings.pages.play.loadingGameTextLine2}
       </div>
     );
   }

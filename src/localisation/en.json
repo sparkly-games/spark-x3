@@ -1,4 +1,7 @@
 {
+    "meta": {
+        "flag": "🇬🇧+"
+    },
     "tags": {
         "action": "Action",
         "arcade": "Arcade",
@@ -11,7 +14,6 @@
         "platformer": "Platformer",
         "puzzle": "Puzzle",
         "racing": "Racing",
-        "running": "Running",
         "simulation": "Simulation",
         "sports": "Sports",
         "strategy": "Strategy"
@@ -31,14 +33,34 @@
             "unlockModalButtonText": "Unlock for 6 hours",
             "unlockErrorNoCode": "Enter an unlock code.",
             "unlockErrorInvalidCode": "Invalid unlock code.",
-            "searchResults": "Search results"
+            "searchResults": "Search results",
+            "close": "Close",
+            "searchPlaceholder": "Search games..."
         },
         "play": {
             "playingNow": "Playing now",
             "homeButtonLabel": "Home",
             "fullscreenButtonLabel": "Fullscreen",
             "loadingGameTextLine1": "Loading game",
-            "loadingGameTextLine2": "Please wait..."
+            "loadingGameTextLine2": "Please wait...",
+            "play": "Play",
+            "broken": "Broken"
+        },
+        "announcements": {
+            "label": "Announcements",
+            "notAvailableInYourLocale": "Announcements are not available in your language."
+        },
+        "banScreen": {
+            "title": "SPARK X3",
+            "accessControl": "Access control",
+            "accessRestricted": "Access restricted",
+            "accessRestrictedSublineText": "This device has been restricted from accessing Spark X3.",
+            "deviceReference":"Device reference",
+            "reason": "Reason",
+            "reasonNotAvailable": "Ban reasons are not available in your language.",
+            "expires": "Expires",
+            "errorHelptextLong": "If you believe this restriction was made in error, provide the device reference above to a Spark X3 administrator.",
+            "baselineBranding": "Spark X3"
         }
     }
 }

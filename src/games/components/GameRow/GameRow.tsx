@@ -1,6 +1,10 @@
 import type { Game } from "../../types/game";
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
+
 import GameCard from "../GameCard/GameCard";
+
+import { useLanguage } from "../../../localisation/LanguageContext";
 
 interface Props {
   title: string;
@@ -8,13 +12,20 @@ interface Props {
 }
 
 export default function GameRow({ title, games }: Props) {
+  const strings = useLanguage().lang.src;
+
   const [isCollapsed, setIsCollapsed] = useState(true);
 
-  useState(() => {
-    if (title.includes("Search")) {
+  useEffect(() => {
+    if (title === strings.pages.home.searchResults) {
       setIsCollapsed(false);
     }
-  });
+  }, [title, strings.pages.home.searchResults]);
+
+  const displayTitle =
+    title === strings.pages.home.searchResults
+      ? strings.pages.home.searchResults
+      : strings.tags[title] ?? title;
 
   return (
     <section className="mt-4">
@@ -31,7 +42,7 @@ export default function GameRow({ title, games }: Props) {
             cursor-pointer
           "
         >
-          {title}
+          {displayTitle}
         </h2>
       </div>
 

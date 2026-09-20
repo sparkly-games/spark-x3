@@ -1,17 +1,19 @@
 {
+  "meta": {
+    "flag": "🇧🇬"
+  },
   "tags": {
     "action": "Екшън",
-    "arcade": "Аркада",
-    "casual": "Неангажиращи",
+    "arcade": "Аркадни",
+    "casual": "Небрежни",
     "clicker": "Кликер",
-    "cooking": "Готварски",
+    "cooking": "Готвене",
     "horror": "Ужаси",
-    "idle": "Бездействие",
+    "idle": "Idle",
     "physics": "Физика",
-    "platformer": "Платформер",
-    "puzzle": "Пъзел",
-    "racing": "Състезания",
-    "running": "Бягане",
+    "platformer": "Платформър",
+    "puzzle": "Пъзели",
+    "racing": "Състезателни",
     "simulation": "Симулация",
     "sports": "Спорт",
     "strategy": "Стратегия"
@@ -21,24 +23,44 @@
       "title": "Spark X3",
       "games": "Игри",
       "subline": "Играйте безплатни игри директно в браузъра си.",
-      "noGamesPrefix": "Не са намерени игри за ",
-      "deviceReference": "Референция на устройството",
-      "deviceReferenceHelptext": "Предоставете тази референция на администратор, ако се нуждаете от помощ.",
+      "noGamesPrefix": "Няма намерени игри за ",
+      "deviceReference": "Идентификатор на устройството",
+      "deviceReferenceHelptext": "Предоставете този идентификатор на администратор, ако имате нужда от помощ.",
       "doneModalButtonText": "Готово",
-      "unlockBrokenGames": "Отключване на счупени игри",
-      "unlockBrokenGamesHelptext": "Въведете код за отключване, за да получите временен достъп до игри, маркирани като счупени.",
+      "unlockBrokenGames": "Отключване на неработещи игри",
+      "unlockBrokenGamesHelptext": "Въведете код за отключване, за да получите временно достъп до игри, отбелязани като неработещи.",
       "brokenGamesTextInputPlaceholder": "Въведете код за отключване",
-      "unlockModalButtonText": "Отключване за 6 часа",
+      "unlockModalButtonText": "Отключи за 6 часа",
       "unlockErrorNoCode": "Въведете код за отключване.",
       "unlockErrorInvalidCode": "Невалиден код за отключване.",
-      "searchResults": "Резултати от търсенето"
+      "searchResults": "Резултати от търсенето",
+      "close": "Затвори",
+      "searchPlaceholder": "Търсене на игри..."
     },
     "play": {
-      "playingNow": "Играе се в момента",
+      "playingNow": "Играете сега",
       "homeButtonLabel": "Начало",
       "fullscreenButtonLabel": "Цял екран",
-      "loadingGameTextLine1": "Зареждане на игра",
-      "loadingGameTextLine2": "Моля, изчакайте..."
+      "loadingGameTextLine1": "Зареждане на играта",
+      "loadingGameTextLine2": "Моля, изчакайте...",
+      "play": "Играй",
+      "broken": "Неработеща"
+    },
+    "announcements": {
+      "label": "Съобщения",
+      "notAvailableInYourLocale": "Съобщенията не са налични на вашия език."
+    },
+    "banScreen": {
+      "title": "SPARK X3",
+      "accessControl": "Контрол на достъпа",
+      "accessRestricted": "Достъпът е ограничен",
+      "accessRestrictedSublineText": "Това устройство е ограничено от достъп до Spark X3.",
+      "deviceReference": "Идентификатор на устройството",
+      "reason": "Причина",
+      "reasonNotAvailable": "Причините за ограничението не са налични на вашия език.",
+      "expires": "Изтича",
+      "errorHelptextLong": "Ако смятате, че това ограничение е направено по погрешка, предоставете горния идентификатор на устройството на администратор на Spark X3.",
+      "baselineBranding": "Spark X3"
     }
   }
 }

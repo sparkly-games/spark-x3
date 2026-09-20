@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "flag": "🇵🇹"
+  },
   "tags": {
     "action": "Ação",
     "arcade": "Arcade",
@@ -6,11 +9,10 @@
     "clicker": "Clicker",
     "cooking": "Culinária",
     "horror": "Terror",
-    "idle": "Ocioso",
+    "idle": "Idle",
     "physics": "Física",
     "platformer": "Plataforma",
     "puzzle": "Puzzle",
-    "racing": "Corrida",
     "running": "Corrida",
     "simulation": "Simulação",
     "sports": "Desporto",
@@ -20,25 +22,45 @@
     "home": {
       "title": "Spark X3",
       "games": "Jogos",
-      "subline": "Jogue jogos grátis diretamente no seu navegador.",
-      "noGamesPrefix": "Nenhum jogo encontrado para ",
+      "subline": "Jogue jogos gratuitos diretamente no seu navegador.",
+      "noGamesPrefix": "Não foram encontrados jogos para ",
       "deviceReference": "Referência do dispositivo",
       "deviceReferenceHelptext": "Forneça esta referência a um administrador se precisar de ajuda.",
       "doneModalButtonText": "Concluído",
-      "unlockBrokenGames": "Desbloquear jogos avariados",
-      "unlockBrokenGamesHelptext": "Introduza um código de desbloqueio para aceder temporariamente a jogos marcados como avariados.",
-      "brokenGamesTextInputPlaceholder": "Introduzir código de desbloqueio",
-      "unlockModalButtonText": "Desbloquear por 6 horas",
+      "unlockBrokenGames": "Desbloquear jogos com problemas",
+      "unlockBrokenGamesHelptext": "Introduza um código de desbloqueio para aceder temporariamente aos jogos marcados como tendo problemas.",
+      "brokenGamesTextInputPlaceholder": "Introduza o código de desbloqueio",
+      "unlockModalButtonText": "Desbloquear durante 6 horas",
       "unlockErrorNoCode": "Introduza um código de desbloqueio.",
       "unlockErrorInvalidCode": "Código de desbloqueio inválido.",
-      "searchResults": "Resultados da pesquisa"
+      "searchResults": "Resultados da pesquisa",
+      "close": "Fechar",
+      "searchPlaceholder": "Pesquisar jogos..."
     },
     "play": {
       "playingNow": "A jogar agora",
       "homeButtonLabel": "Início",
       "fullscreenButtonLabel": "Ecrã inteiro",
-      "loadingGameTextLine1": "A carregar jogo",
-      "loadingGameTextLine2": "Por favor, aguarde..."
+      "loadingGameTextLine1": "A carregar o jogo",
+      "loadingGameTextLine2": "Aguarde...",
+      "play": "Jogar",
+      "broken": "Com problemas"
+    },
+    "announcements": {
+      "label": "Anúncios",
+      "notAvailableInYourLocale": "Os anúncios não estão disponíveis no seu idioma."
+    },
+    "banScreen": {
+      "title": "SPARK X3",
+      "accessControl": "Controlo de acesso",
+      "accessRestricted": "Acesso restrito",
+      "accessRestrictedSublineText": "Este dispositivo está impedido de aceder ao Spark X3.",
+      "deviceReference": "Referência do dispositivo",
+      "reason": "Motivo",
+      "reasonNotAvailable": "Os motivos da restrição não estão disponíveis no seu idioma.",
+      "expires": "Expira",
+      "errorHelptextLong": "Se acredita que esta restrição foi aplicada por engano, forneça a referência do dispositivo acima a um administrador do Spark X3.",
+      "baselineBranding": "Spark X3"
     }
   }
 }

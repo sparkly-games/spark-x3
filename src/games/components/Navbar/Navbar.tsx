@@ -1,11 +1,13 @@
 import { Headphones, User, Search, X } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "../../../localisation/LanguageContext";
 
 interface NavbarProps {
   onSearch?: (query: string) => void;
 }
 
 export default function Navbar({ onSearch }: NavbarProps) {
+  const strings = useLanguage().lang.src;
   const [search, setSearch] = useState("");
 
   function handleSearch(value: string) {
@@ -50,7 +52,7 @@ export default function Navbar({ onSearch }: NavbarProps) {
           window.location.href = "/";
         }}
       >
-        Spark X3
+        {strings.pages.home.title}
       </button>
 
       {/* Search */}
@@ -84,7 +86,7 @@ export default function Navbar({ onSearch }: NavbarProps) {
           onChange={(event) =>
             handleSearch(event.target.value)
           }
-          placeholder="Search games..."
+          placeholder={strings.pages.home.searchPlaceholder}
           className="
             min-w-0
             flex-1

@@ -5,12 +5,15 @@ import { Play } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import GamePoster from "../GamePoster/GamePoster";
+import { useLanguage } from "../../../localisation/LanguageContext";
 
 interface Props {
   game: Game;
 }
 
 export default function GameCard({ game }: Props) {
+
+  const strings = useLanguage().lang.src;
   const navigate = useNavigate();
 
   const broken = game.broken ?? false;
@@ -156,7 +159,7 @@ export default function GameCard({ game }: Props) {
               text-zinc-500
             "
           >
-            {disabled ? "Broken" : "Play"}
+            {disabled ? strings.pages.play.broken : strings.pages.play.play}
           </span>
         </div>
       </div>
