@@ -10,7 +10,7 @@ type LanguageSource = {
         flag?: string;
         icon?: string;
     };
-    [key: string]: unknown;
+    [key: string]: any;
 };
 
 export const createLang = (display: string, src: LanguageSource) => {
