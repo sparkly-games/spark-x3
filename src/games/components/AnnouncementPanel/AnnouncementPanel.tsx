@@ -8,6 +8,8 @@ import {
 
 import type { Announcement } from "../../lib/announcements";
 
+import { useLanguage } from "../../../localisation/LanguageContext";
+
 interface Props {
   announcements: Announcement[];
   unreadAnnouncements: Announcement[];
@@ -32,6 +34,75 @@ export default function AnnouncementPanel({
   onRead,
   onMarkAllRead,
 }: Props) {
+  const { language, lang } = useLanguage();
+  const strings = lang.src;
+
+  if (language !== "en") {
+    return (
+      <div
+        className="
+          absolute
+          right-0
+          top-12
+          z-50
+          w-80
+          overflow-hidden
+          rounded-md
+          border
+          border-zinc-800
+          bg-zinc-950
+          shadow-xl
+        "
+      >
+        {/* Header */}
+        <div
+          className="
+            flex
+            items-center
+            justify-between
+            border-b
+            border-zinc-800
+            px-4
+            py-3
+          "
+        >
+          <div className="flex items-center gap-2">
+            <Megaphone size={16} />
+
+            <span className="font-semibold">
+              {strings.pages.announcements.label}
+            </span>
+          </div>
+        </div>
+
+        {/* Unavailable message */}
+        <div
+          className="
+            flex
+            flex-col
+            items-center
+            justify-center
+            gap-3
+            px-4
+            py-10
+            text-center
+          "
+        >
+          <CircleX
+            size={32}
+            className="text-red-500"
+          />
+
+          <div>
+            <p className="text-sm font-medium text-zinc-300">
+              {strings.pages.announcements.notAvailableInYourLocale}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       className="
@@ -48,6 +119,7 @@ export default function AnnouncementPanel({
         shadow-xl
       "
     >
+      {/* Header */}
       <div
         className="
           flex
@@ -63,7 +135,7 @@ export default function AnnouncementPanel({
           <Megaphone size={16} />
 
           <span className="font-semibold">
-            Announcements
+            {strings.pages.announcements.label}
           </span>
 
           {unreadAnnouncements.length > 0 && (
@@ -75,6 +147,7 @@ export default function AnnouncementPanel({
 
         {unreadAnnouncements.length > 0 && (
           <button
+            type="button"
             onClick={onMarkAllRead}
             className="
               text-xs
@@ -87,6 +160,7 @@ export default function AnnouncementPanel({
         )}
       </div>
 
+      {/* Announcements */}
       <div className="max-h-96 overflow-y-auto">
         {announcements.length === 0 ? (
           <div
@@ -113,6 +187,7 @@ export default function AnnouncementPanel({
 
             return (
               <button
+                type="button"
                 key={announcement.id}
                 onClick={() => onRead(announcement.id)}
                 className={`
