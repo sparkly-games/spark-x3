@@ -297,5 +297,11 @@ export const games: Game[] = [
     poster: "/images/games/peopleplayground.png",
     broken: true,
     tags: ["simulation", "physics"]
+  },
+  {
+    id: "small-world-cup",
+    title: "A Small World Cup",
+    poster: "/images/games/smallworldcup.png",
+    tags: ["sports", "physics"]
   }
 ];
