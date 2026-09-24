@@ -8,7 +8,7 @@ const cards = [
     {
         ref: "sparxreader",
         description: "Dive into a world of literature and enhance your reading experience.",
-        disabled: false,
+        disabled: true,
         type: "trdp"
     }
 ];
