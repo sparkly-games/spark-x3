@@ -2,7 +2,7 @@ const cards = [
     {
         ref: "sparxscience",
         description: "Explore the wonders of science and how it shapes our world.",
-        disabled: false,
+        disabled: true,
         type: "trdp"
     },
     {
@@ -13,7 +13,30 @@ const cards = [
     }
 ];
 
+const errors = {
+    1: {
+        display: "No Websites",
+        message: "No websites are available at this moment. Please check again in a few hours."
+    }
+}
+
+const errorActive = (error) => {
+    for (const errorDiv of document.querySelectorAll("#errorDiv")) {
+            errorDiv.innerHTML = `
+                <div class="max-w-6xl mx-auto px-6">
+                    <div class="rounded-xl border border-gray-700 bg-red-500 p-6 shadow-lg text-center">
+                        <h3 class="text-2xl font-semibold text-white">Error ${error}: ${errors[error]["display"]}</h3>
+                        <p class="mt-4 text-sm text-gray-300">${errors[error]["message"]}</p>
+                    </div>
+                </div>
+            `;
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+
+    if (cards.filter(card => !card.disabled).length === 0) errorActive(1)
+
     const container = document.getElementById("card-container");
 
     cards.forEach(card => {
