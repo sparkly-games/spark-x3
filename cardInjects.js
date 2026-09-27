@@ -1,13 +1,31 @@
 const cards = [
     {
+        ref: "sparxmaths",
+        disabled: false,
+        type: "trdp"
+    },
+    {
+        ref: "classcharts",
+        disabled: false,
+        type: "trdp"
+    },
+    {
+        ref: "senecalearning",
+        disabled: false,
+        type: "trdp"
+    },
+    {
+        ref: "msword",
+        disabled: false,
+        type: "trdp"
+    },
+    {
         ref: "sparxscience",
-        description: "Explore the wonders of science and how it shapes our world.",
         disabled: true,
         type: "trdp"
     },
     {
         ref: "sparxreader",
-        description: "Dive into a world of literature and enhance your reading experience.",
         disabled: true,
         type: "trdp"
     }
@@ -35,7 +53,7 @@ const errorActive = (error) => {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    if (cards.filter(card => !card.disabled).length === 0) errorActive(1)
+    if (cards.filter(card => !card.disabled).length === 0) errorActive(1);
 
     const container = document.getElementById("card-container");
 
@@ -60,10 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h3 class="mt-2 text-2xl font-semibold text-white">
                             ${card.ref}
                         </h3>
-
-                        <p class="mt-4 text-sm text-gray-300">
-                            ${card.description}
-                        </p>
 
                         <p class="mt-4 text-sm font-medium text-gray-400">
                             TYPE: ${card.type}
