@@ -47,6 +47,7 @@ export const games: Game[] = [
     id: "subway-surfers",
     title: "Subway Surfers",
     poster: "/images/games/subwaysurfers.png",
+    broken: true,
     tags: ["arcade"]
   },
 
@@ -236,6 +237,7 @@ export const games: Game[] = [
     id: "no-pain-no-gain",
     title: "No Pain No Gain",
     poster: "/images/games/nopainnogain.png",
+    broken: true,
     tags: ["arcade", "physics"]
   },
 
@@ -371,6 +373,7 @@ export const games: Game[] = [
     id: "henry-stickmin/infiltrating-the-airship",
     title: "Infiltrating the Airship",
     poster: "/images/games/infiltratingtheairship.png",
+    broken: true,
     tags: ["action", "casual"]
   },
 
@@ -392,6 +395,7 @@ export const games: Game[] = [
     id: "henry-stickmin/fleeing-the-complex",
     title: "Fleeing the Complex",
     poster: "/images/games/fleeingthecomplex.png",
+    broken: true,
     tags: ["action", "casual"]
   },
 
