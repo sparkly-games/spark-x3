@@ -21,12 +21,12 @@ const cards = [
     },
     {
         ref: "sparxscience",
-        disabled: true,
+        disabled: false,
         type: "trdp"
     },
     {
         ref: "sparxreader",
-        disabled: true,
+        disabled: false,
         type: "trdp"
     }
 ];
