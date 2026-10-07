@@ -6,9 +6,10 @@ import { langs } from "../../../localisation/create-lang";
 
 interface NavbarProps {
   onSearch?: (query: string) => void;
+  ver?: string;
 }
 
-export default function Navbar({ onSearch }: NavbarProps) {
+export default function Navbar({ onSearch, ver }: NavbarProps) {
   const { language, setLanguage, lang } = useLanguage();
   const strings = lang.src;
 
@@ -52,12 +53,17 @@ export default function Navbar({ onSearch }: NavbarProps) {
           text-sky-400
           transition
           hover:text-sky-300
+          flex-row
         "
         onClick={() => {
           window.location.href = "/";
         }}
       >
         {strings.pages.home.title}
+
+        <p className="text-xs text-gray-200">
+          {ver ? ver : "v0"}
+        </p>
       </button>
 
       {/* Search */}

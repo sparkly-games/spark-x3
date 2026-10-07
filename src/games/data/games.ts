@@ -341,14 +341,6 @@ export const games: Game[] = [
   },
 
   {
-    id: "people-playground",
-    title: "People Playground",
-    poster: "/images/games/peopleplayground.png",
-    broken: true,
-    tags: ["simulation", "physics"]
-  },
-
-  {
     id: "small-world-cup",
     title: "A Small World Cup",
     poster: "/images/games/smallworldcup.png",
@@ -404,5 +396,11 @@ export const games: Game[] = [
     title: "Escaping the Prison",
     poster: "/images/games/escapingtheprison.png",
     tags: ["action", "casual"]
+  },
+  {
+    id: "bubble-tanks-td",
+    title: "Bubble Tanks TD",
+    poster: "/images/games/bubbletankstd.png",
+    tags: ["action", "strategy", "puzzle"]
   }
 ];

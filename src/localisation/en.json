@@ -5,6 +5,7 @@
     "tags": {
         "action": "Action",
         "arcade": "Arcade",
+        "brain-break": "Brain Break",
         "casual": "Casual",
         "clicker": "Clicker",
         "cooking": "Cooking",
@@ -35,7 +36,7 @@
             "unlockErrorInvalidCode": "Invalid unlock code.",
             "searchResults": "Search results",
             "close": "Close",
-            "searchPlaceholder": "Search games..."
+            "searchPlaceholder": "Ragdoll Archers, Tiny Fishing, Cut the Rope..."
         },
         "play": {
             "playingNow": "Playing now",

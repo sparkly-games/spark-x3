@@ -109,7 +109,7 @@ export default function Home() {
         text-white
       "
     >
-      <Navbar onSearch={setSearch} />
+      <Navbar onSearch={setSearch} ver={"v1.1.3 | er4sf"} />
 
       <div className="mx-auto max-w-7xl px-5 pb-16 pt-20">
         {/* Welcome header */}
