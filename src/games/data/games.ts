@@ -402,5 +402,11 @@ export const games: Game[] = [
     title: "Bubble Tanks TD",
     poster: "/images/games/bubbletankstd.png",
     tags: ["action", "strategy", "puzzle"]
+  },
+  {
+    id: "super-sudoku",
+    title: "Super Sudoku",
+    poster: "/images/games/supersudoku.png",
+    tags: ["brain-break", "puzzle"]
   }
 ];

@@ -8,12 +8,34 @@ import { useLanguage } from "../../../localisation/LanguageContext";
 
 import { Key, Megaphone, Trash2 } from "lucide-react";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import { useAnnouncements } from "../../hooks/useAnnouncements";
 import { getDeviceId } from "../../lib/deviceId";
 
 export default function Home() {
+
+  const decodeIfBase64 = (text: string) => {
+    try {
+      return atob(text);
+    } catch {
+      return text;
+    }
+  };
+
+  const [version, setVersion] = useState(". . .");
+
+  useEffect(() => {
+    const fetchVersion = async () => {
+      const versionFetched = await fetch("/version")
+        .then(data => data.text())
+        .then(data => decodeIfBase64(data))
+
+      setVersion(versionFetched);
+    };
+
+    fetchVersion();
+  }, []);
 
   const strings = useLanguage().lang.src;
 
@@ -109,7 +131,7 @@ export default function Home() {
         text-white
       "
     >
-      <Navbar onSearch={setSearch} ver={"v1.1.3 | er4sf"} />
+      <Navbar onSearch={setSearch} ver={version} />
 
       <div className="mx-auto max-w-7xl px-5 pb-16 pt-20">
         {/* Welcome header */}
