@@ -27,7 +27,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchVersion = async () => {
-      const versionFetched = await fetch("/version")
+      const versionFetched = await fetch("/version.txt")
         .then(data => data.text())
         .then(data => decodeIfBase64(data))
 
