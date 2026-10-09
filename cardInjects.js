@@ -16,6 +16,14 @@ const cards = [
         disabled: false
     },
     {
+        ref: "teams-edu",
+        disabled: false
+    },
+    {
+        ref: "onedrive",
+        disabled: false
+    },
+    {
         ref: "sparxscience",
         disabled: false,
         ign: true
@@ -67,7 +75,7 @@ const addVersions = async (cards) => {
                     card.ver = "Unavailable";
                     return;
                 }
-                
+
                 const response = await fetch(
                     `https://${card.ref}.${host}/version.txt`
                 );
@@ -125,7 +133,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         </h3>
 
                         <p class="mt-4 text-sm font-medium text-gray-400">
-                            VER: ${card.ver ?? "Unknown"}
+                            ${!card.ign ? `VER: ${card.ver ?? "Unknown"}` : ""}
                         </p>
                     </div>
 
