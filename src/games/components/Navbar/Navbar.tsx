@@ -61,9 +61,11 @@ export default function Navbar({ onSearch, ver }: NavbarProps) {
       >
         {strings.pages.home.title}
 
-        <p className="text-xs text-gray-200">
-          {ver ? ver : "v0"}
-        </p>
+        {ver != "Unknown" &&
+          <p className="text-xs text-gray-200">
+            {ver}
+          </p>
+        }
       </button>
 
       {/* Search */}

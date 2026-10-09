@@ -30,6 +30,7 @@ export default function Home() {
       const versionFetched = await fetch("/version.txt")
         .then(data => data.text())
         .then(data => decodeIfBase64(data))
+        .then(data => { if(data.length >= 60) data = "Unknown"; return data; })
 
       setVersion(versionFetched);
     };
