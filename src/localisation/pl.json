@@ -1,0 +1,67 @@
+{
+    "meta": {
+        "flag": "🇵🇱"
+    },
+    "tags": {
+        "action": "Akcja",
+        "arcade": "Arcade",
+        "brain-break": "Przerwa na odpoczynek",
+        "casual": "Casual",
+        "clicker": "Clicker",
+        "cooking": "Gotowanie",
+        "horror": "Horror",
+        "idle": "Idle",
+        "physics": "Fizyka",
+        "platformer": "Platforma",
+        "puzzle": "Łamigłówki",
+        "racing": "Wyścigi",
+        "simulation": "Symulacje",
+        "sports": "Sport",
+        "strategy": "Strategia"
+    },
+    "pages": {
+        "home": {
+            "title": "Spark X3",
+            "games": "Gry",
+            "subline": "Graj w darmowe gry bezpośrednio w przeglądarce.",
+            "noGamesPrefix": "Nie znaleziono gier dla ",
+            "deviceReference": "Numer identyfikacyjny urządzenia",
+            "deviceReferenceHelptext": "Jeśli potrzebujesz pomocy, podaj ten numer administratorowi.",
+            "doneModalButtonText": "Gotowe",
+            "unlockBrokenGames": "Odblokuj niedziałające gry",
+            "unlockBrokenGamesHelptext": "Wprowadź kod odblokowujący, aby uzyskać tymczasowy dostęp do gier oznaczonych jako niedziałające.",
+            "brokenGamesTextInputPlaceholder": "Wprowadź kod odblokowujący",
+            "unlockModalButtonText": "Odblokuj na 6 godzin",
+            "unlockErrorNoCode": "Wprowadź kod odblokowujący.",
+            "unlockErrorInvalidCode": "Nieprawidłowy kod odblokowujący.",
+            "searchResults": "Wyniki wyszukiwania",
+            "close": "Zamknij",
+            "searchPlaceholder": "Ragdoll Archers, Tiny Fishing, Cut the Rope..."
+        },
+        "play": {
+            "playingNow": "Trwa rozgrywka",
+            "homeButtonLabel": "Strona główna",
+            "fullscreenButtonLabel": "Pełny ekran",
+            "loadingGameTextLine1": "Ładowanie gry",
+            "loadingGameTextLine2": "Proszę czekać...",
+            "play": "Zagraj",
+            "broken": "Uszkodzone"
+        },
+        "announcements": {
+            "label": "Ogłoszenia",
+            "notAvailableInYourLocale": "Ogłoszenia nie są dostępne w Twoim języku."
+        },
+        "banScreen": {
+            "title": "SPARK X3",
+            "accessControl": "Kontrola dostępu",
+            "accessRestricted": "Dostęp ograniczony",
+            "accessRestrictedSublineText": "Dostęp tego urządzenia do Spark X3 został ograniczony.",
+            "deviceReference":"Identyfikator urządzenia",
+            "reason": "Powód",
+            "reasonNotAvailable": "Powody blokady nie są dostępne w Twoim języku.",
+            "expires": "Wygasanie",
+            "errorHelptextLong": "Jeśli uważasz, że ograniczenie to zostało nałożone przez pomyłkę, podaj powyższy numer identyfikacyjny urządzenia administratorowi Spark X3.",
+            "baselineBranding": "Spark X3"
+        }
+    }
+}

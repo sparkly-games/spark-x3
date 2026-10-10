@@ -1,4 +1,5 @@
 import en from "./en.json";
+import pl from "./pl.json";
 import pt from "./pt.json";
 import es from "./es.json";
 import fr from "./fr.json";
@@ -28,6 +29,7 @@ export type Lang = ReturnType<typeof createLang>;
 
 export const langs: Record<string, Lang> = {
     en: createLang("English", en),
+    pl: createLang("Polski", pl),
     pt: createLang("Português", pt),
     es: createLang("Español", es),
     fr: createLang("Français", fr),
