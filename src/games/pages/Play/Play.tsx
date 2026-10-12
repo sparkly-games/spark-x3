@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { Maximize, Home, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import { Maximize, Home, ChevronLeft, ChevronRight } from "lucide-react";
 import { games } from "../../data/games";
 import { useLanguage } from "../../../localisation/LanguageContext";
 
