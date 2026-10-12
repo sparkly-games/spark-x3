@@ -40,8 +40,6 @@
     },
     "play": {
       "playingNow": "正在遊玩",
-      "homeButtonLabel": "首頁",
-      "fullscreenButtonLabel": "全螢幕",
       "loadingGameTextLine1": "正在載入遊戲",
       "loadingGameTextLine2": "請稍候...",
       "play": "遊玩",

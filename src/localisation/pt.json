@@ -40,8 +40,6 @@
     },
     "play": {
       "playingNow": "A jogar agora",
-      "homeButtonLabel": "Início",
-      "fullscreenButtonLabel": "Ecrã inteiro",
       "loadingGameTextLine1": "A carregar o jogo",
       "loadingGameTextLine2": "Aguarde...",
       "play": "Jogar",

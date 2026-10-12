@@ -21,6 +21,17 @@ export function LanguageProvider({
     localStorage.getItem("spark-x3-language") ?? "en"
   );
 
+  if(navigator.language && !localStorage.getItem("spark-x3-language")) {
+    let browserLanguage = navigator.language.split("-")[0];
+    if(browserLanguage == "zh") {
+      browserLanguage = "zh-Hant";
+    }
+    if (langs[browserLanguage]) {
+      setLanguageState(browserLanguage);
+      localStorage.setItem("spark-x3-language", browserLanguage);
+    }
+  }
+
   function setLanguage(language: string) {
     if (!langs[language]) return;
 

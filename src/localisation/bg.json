@@ -40,8 +40,6 @@
     },
     "play": {
       "playingNow": "Играете сега",
-      "homeButtonLabel": "Начало",
-      "fullscreenButtonLabel": "Цял екран",
       "loadingGameTextLine1": "Зареждане на играта",
       "loadingGameTextLine2": "Моля, изчакайте...",
       "play": "Играй",

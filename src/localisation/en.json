@@ -40,8 +40,6 @@
         },
         "play": {
             "playingNow": "Playing now",
-            "homeButtonLabel": "Home",
-            "fullscreenButtonLabel": "Fullscreen",
             "loadingGameTextLine1": "Loading game",
             "loadingGameTextLine2": "Please wait...",
             "play": "Play",

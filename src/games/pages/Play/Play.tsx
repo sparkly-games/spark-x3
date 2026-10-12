@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { Maximize, Home, ArrowLeft } from "lucide-react";
+import { Maximize, Home, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { games } from "../../data/games";
 import { useLanguage } from "../../../localisation/LanguageContext";
 
@@ -46,7 +46,7 @@ export default function Play() {
         <div className="flex min-w-0 items-center gap-2">
           <button
             type="button"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate("/games/")}
             title="Back"
             className="
               flex
@@ -65,9 +65,9 @@ export default function Play() {
               hover:bg-zinc-700
               hover:text-white
             "
-            aria-label="Go back"
+            aria-label="Home"
           >
-            <ArrowLeft size={18} />
+            <Home size={14} />
           </button>
 
           <div className="ml-2 min-w-0">
@@ -84,7 +84,7 @@ export default function Play() {
         <div className="flex shrink-0 items-center gap-2">
           <button
             type="button"
-            onClick={() => navigate("/")}
+            onClick={() => navigate(-1)}
             className="
               flex
               h-9
@@ -103,9 +103,33 @@ export default function Play() {
               hover:text-white
             "
           >
-            <Home size={16} />
-            {strings.pages.play.homeButtonLabel}
+            <ChevronLeft size={14} />
           </button>
+          <button
+            type="button"
+            onClick={() => navigate(1)}
+            className="
+              flex
+              h-9
+              items-center
+              gap-2
+              rounded
+              border
+              border-zinc-700
+              bg-zinc-800
+              px-3
+              text-sm
+              font-medium
+              text-zinc-300
+              transition
+              hover:bg-zinc-700
+              hover:text-white
+            "
+          >
+            <ChevronRight size={14} />
+          </button>
+
+          <div className="h-5 w-px bg-zinc-700 m-5" />
 
           <button
             type="button"
@@ -127,8 +151,7 @@ export default function Play() {
               hover:bg-sky-400
             "
           >
-            <Maximize size={16} />
-            {strings.pages.play.fullscreenButtonLabel}
+            <Maximize size={14} />
           </button>
         </div>
       </header>
