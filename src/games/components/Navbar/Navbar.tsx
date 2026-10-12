@@ -1,5 +1,5 @@
-import { Headphones, User, Search, X } from "lucide-react";
-import { useState } from "react";
+import { Headphones, Search, X } from "lucide-react";
+import { useState, useEffect } from "react";
 
 import { useLanguage } from "../../../localisation/LanguageContext";
 import { langs } from "../../../localisation/create-lang";
@@ -15,6 +15,18 @@ export default function Navbar({ onSearch, ver }: NavbarProps) {
 
   const [search, setSearch] = useState("");
   const [languageOpen, setLanguageOpen] = useState(false);
+  const [isMusicBlocked, setIsMusicBlocked] = useState(false);
+
+  useEffect(() => {
+    const checkMusicBlocked = async () => {
+      let val = await fetch("https://sc.bloat.cat/", { method: "HEAD", mode: "no-cors" })
+        .then(() => false)
+        .catch(() => true);
+
+      setIsMusicBlocked(val);
+    }
+    checkMusicBlocked();
+  }, [])
 
   function handleSearch(value: string) {
     setSearch(value);
@@ -222,13 +234,13 @@ export default function Navbar({ onSearch, ver }: NavbarProps) {
 
         {/* Music */}
         <button
+          disabled={isMusicBlocked}
           type="button"
           title="Music"
-          className="
+          className={`
             flex
             h-9
             w-9
-            cursor-pointer
             items-center
             justify-center
             rounded
@@ -237,10 +249,8 @@ export default function Navbar({ onSearch, ver }: NavbarProps) {
             bg-zinc-800
             text-zinc-300
             transition
-            hover:border-zinc-500
-            hover:bg-zinc-700
-            hover:text-white
-          "
+            ${isMusicBlocked ? "opacity-50 cursor-not-allowed" : "hover:border-zinc-500 hover:bg-zinc-700 hover:text-white cursor-pointer"}
+          `}
           onClick={() => {
             window.open(
               "https://sc.bloat.cat/",
@@ -249,29 +259,6 @@ export default function Navbar({ onSearch, ver }: NavbarProps) {
           }}
         >
           <Headphones size={18} />
-        </button>
-
-        {/* Account */}
-        <button
-          type="button"
-          title="Account"
-          disabled
-          aria-disabled
-          className="
-            flex
-            h-9
-            w-9
-            cursor-not-allowed
-            items-center
-            justify-center
-            rounded
-            border
-            border-zinc-800
-            bg-zinc-800
-            text-zinc-600
-          "
-        >
-          <User size={18} />
         </button>
       </div>
     </nav>
