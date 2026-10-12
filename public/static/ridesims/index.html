@@ -127,6 +127,7 @@ const games = [
     { name: "inferno", difficulty: "Easy", display: "Nemesis Inferno" },
     { name: "maelstrom", difficulty: "Moderate" },
     { name: "ripsaw", difficulty: "Hard" },
+    { name: "colossus", difficulty: "Easy" },
     // { name: "", difficulty: "Easy" },
 ];
 
@@ -151,7 +152,7 @@ games.forEach(game => {
 
     const img = card.querySelector("img");
 
-    const formats = ["webp", "png", "jpg"];
+    const formats = ["webp", "png", "jpg", "jpeg", "avif", "gif", "svg", "bmp", "tiff", "ico"];
     let index = 0;
 
     function loadImage() {
