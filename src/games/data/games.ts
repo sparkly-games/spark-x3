@@ -404,5 +404,29 @@ export const games: Game[] = [
     title: "Super Sudoku",
     poster: "/images/games/supersudoku.png",
     tags: ["brain-break", "puzzle"]
+  },
+  {
+    id: "learn-to-fly/ltf-1",
+    title: "Learn to Fly",
+    poster: "/images/games/learntofly.png",
+    tags: ["arcade", "casual"]
+  },
+  {
+    id: "learn-to-fly/ltf-2",
+    title: "Learn to Fly 2",
+    poster: "/images/games/learntofly2.png",
+    tags: ["arcade", "casual"]
+  },
+  {
+    id: "learn-to-fly/ltf-3",
+    title: "Learn to Fly 3",
+    poster: "/images/games/learntofly3.png",
+    tags: ["arcade", "casual"]
+  },
+  {
+    id: "learn-to-fly/ltf-idle",
+    title: "Learn to Fly Idle",
+    poster: "/images/games/learntoflyidle.png",
+    tags: ["idle", "casual"]
   }
 ];
