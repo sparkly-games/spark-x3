@@ -58,7 +58,7 @@ export default function GameCard({ game }: Props) {
     <div
       className={`
         group
-        w-44
+        w-36
         shrink-0
         rounded-md
         border

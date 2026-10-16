@@ -1,9 +1,8 @@
+
 import type { Game } from "../../types/game";
 
 import { useEffect, useState } from "react";
-
 import GameCard from "../GameCard/GameCard";
-
 import { useLanguage } from "../../../localisation/LanguageContext";
 
 interface Props {
@@ -49,18 +48,13 @@ export default function GameRow({ title, games }: Props) {
       {!isCollapsed && (
         <div
           className="
-            flex
+            grid
+            grid-cols-[repeat(auto-fill,minmax(144px,1fr))]
             gap-3
-            overflow-x-auto
-            overflow-y-visible
-            scrollbar-hide
           "
         >
           {games.map((game) => (
-            <GameCard
-              key={game.id}
-              game={game}
-            />
+            <GameCard key={game.id} game={game} />
           ))}
         </div>
       )}
