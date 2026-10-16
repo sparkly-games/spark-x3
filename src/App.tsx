@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./games/pages/Home/Home";
 import Play from "./games/pages/Play/Play";
+import SmartCalcHomepage from "./smart-calc/index";
 import { getDeviceId } from "./games/lib/deviceId";
 import ProtectedRoute from "./games/components/ProtectedRoute/ProtectedRoute";
 import { LanguageProvider } from "./localisation/LanguageContext";
@@ -22,6 +23,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/games" element={<Home />} />
       <Route path="/play/:id" element={<Play />} />
+      <Route path="smart-calculator" element={<SmartCalcHomepage />} />
     </Routes>
   );
 }

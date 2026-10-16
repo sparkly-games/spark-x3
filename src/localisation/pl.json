@@ -61,5 +61,6 @@
             "errorHelptextLong": "Jeśli uważasz, że ograniczenie to zostało nałożone przez pomyłkę, podaj powyższy numer identyfikacyjny urządzenia administratorowi Spark X3.",
             "baselineBranding": "Spark X3"
         }
-    }
+    },
+    "notAvailableInYourLocale": "Ta strona nie jest dostępna w Twoim języku."
 }

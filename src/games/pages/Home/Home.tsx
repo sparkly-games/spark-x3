@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../../../../components/Navbar";
 import GameRow from "../../components/GameRow/GameRow";
 import AnnouncementPanel from "../../components/AnnouncementPanel/AnnouncementPanel";
 
@@ -23,7 +23,7 @@ export default function Home() {
     }
   };
 
-  const [version, setVersion] = useState(". . .");
+  const [ver, setVersion] = useState(". . .");
 
   useEffect(() => {
     const fetchVersion = async () => {
@@ -56,6 +56,7 @@ export default function Home() {
   const [unlockError, setUnlockError] = useState("");
 
   const lastGamesTap = useRef(0);
+  const showSearch = true;
 
   const deviceId = getDeviceId();
 
@@ -132,7 +133,7 @@ export default function Home() {
         text-white
       "
     >
-      <Navbar onSearch={setSearch} ver={version} />
+      <Navbar onSearch={setSearch} { ...{ showSearch, ver } }/>
 
       <div className="mx-auto max-w-7xl px-5 pb-16 pt-20">
         {/* Welcome header */}

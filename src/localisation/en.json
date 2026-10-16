@@ -61,5 +61,6 @@
             "errorHelptextLong": "If you believe this restriction was made in error, provide the device reference above to a Spark X3 administrator.",
             "baselineBranding": "Spark X3"
         }
-    }
+    },
+    "notAvailableInYourLocale": "This page is not available in your language."
 }

@@ -61,5 +61,6 @@
       "errorHelptextLong": "如果你認為此限制是誤設的，請將上方的裝置識別碼提供給 Spark X3 管理員。",
       "baselineBranding": "Spark X3"
     }
-  }
+  },
+  "notAvailableInYourLocale": "此頁面不提供您所選的語言版本。"
 }
