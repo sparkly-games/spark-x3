@@ -64,3 +64,19 @@
   font-size: 12px;
   line-height: 1.5;
 }
+
+.hourglass-spin {
+  animation: hourglass-spin 2.8s ease-in-out infinite;
+}
+
+@keyframes hourglass-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  28.57% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}

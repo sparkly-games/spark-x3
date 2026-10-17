@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../localisation/LanguageContext";
 
 export default function SmartCalcHomepage() {
   const { language, lang } = useLanguage();
   const [ver, setVersion] = useState(". . .");
+  const navigate = useNavigate();
 
   const decodeIfBase64 = (text: string) => {
     try {
@@ -35,6 +37,11 @@ export default function SmartCalcHomepage() {
       </>
     );
   }
+
+  if (!localStorage.getItem("sparkx3:broken-games-unlock")) {
+    navigate("/coming-soon/calc");
+  }
+
   return (
     <>
         <Navbar ver={ver} />
