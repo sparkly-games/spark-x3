@@ -107,6 +107,90 @@ export const games: Game[] = [
   },
 
   {
+    id: "papa-louie/bakeria",
+    title: "Papa's Bakeria",
+    poster: "/images/games/papasbakeria.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
+    id: "papa-louie/burgeria",
+    title: "Papa's Burgeria",
+    poster: "/images/games/papasburgeria.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
+    id: "papa-louie/cheeseria",
+    title: "Papa's Cheeseria",
+    poster: "/images/games/papascheeseria.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
+    id: "papa-louie/cupcakeria",
+    title: "Papa's Cupcakeria",
+    poster: "/images/games/papascupcakeria.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
+    id: "papa-louie/donuteria",
+    title: "Papa's Donuteria",
+    poster: "/images/games/papasdonuteria.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
+    id: "papa-louie/hotdoggeria",
+    title: "Papa's Hotdoggeria",
+    poster: "/images/games/papashotdoggeria.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
+    id: "papa-louie/pancakeria",
+    title: "Papa's Pancakeria",
+    poster: "/images/games/papaspancakeria.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
+    id: "papa-louie/pastaria",
+    title: "Papa's Pastaria",
+    poster: "/images/games/papaspastaria.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
+    id: "papa-louie/scooperia",
+    title: "Papa's Scooperia",
+    poster: "/images/games/papasscooperia.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
+    id: "papa-louie/sushiria",
+    title: "Papa's Sushiria",
+    poster: "/images/games/papassushiria.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
+    id: "papa-louie/tacomia",
+    title: "Papa's Taco Mia",
+    poster: "/images/games/papastacomia.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
+    id: "papa-louie/wingeria",
+    title: "Papa's Wingeria",
+    poster: "/images/games/papaswingeria.png",
+    tags: ["cooking", "simulation"]
+  },
+
+  {
     id: "block-blast",
     title: "Block Blast",
     poster: "/images/games/blockblast.png",

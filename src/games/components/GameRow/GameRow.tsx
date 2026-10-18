@@ -12,6 +12,7 @@ interface Props {
 
 export default function GameRow({ title, games }: Props) {
   const strings = useLanguage().lang.src;
+  const gamesSorted = [...games].sort((a, b) => a.title.localeCompare(b.title));
 
   const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -53,7 +54,7 @@ export default function GameRow({ title, games }: Props) {
             gap-3
           "
         >
-          {games.map((game) => (
+          {gamesSorted.map((game) => (
             <GameCard key={game.id} game={game} />
           ))}
         </div>
