@@ -512,5 +512,29 @@ export const games: Game[] = [
     title: "Learn to Fly Idle",
     poster: "/images/games/learntoflyidle.png",
     tags: ["idle", "casual"]
+  },
+  {
+    id: "monkey-mart",
+    title: "Monkey Mart",
+    poster: "/images/games/monkeymart.png",
+    tags: ["arcade", "casual"]
+  },
+  {
+    id: "retro-bowl",
+    title: "Retro Bowl",
+    poster: "/images/games/retrobowl.png",
+    tags: ["sports", "casual"]
+  },
+  {
+    id: "2048",
+    title: "2048",
+    poster: "/images/games/2048.png",
+    tags: ["puzzle", "casual", "brain-break"]
+  },
+  {
+    id: "hextris",
+    title: "Hextris",
+    poster: "/images/games/hextris.png",
+    tags: ["puzzle", "casual", "brain-break"]
   }
 ];
