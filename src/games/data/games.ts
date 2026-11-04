@@ -536,5 +536,17 @@ export const games: Game[] = [
     title: "Hextris",
     poster: "/images/games/hextris.png",
     tags: ["puzzle", "casual", "brain-break"]
+  },
+  {
+    id: "chessai",
+    title: "Chess (Bot)",
+    poster: "/images/games/chessai.jpg",
+    tags: ["strategy", "casual", "brain-break"]
+  },
+  {
+    id: "melon-playground",
+    title: "Melon Playground",
+    poster: "/images/games/melonplayground.png",
+    tags: ["casual", "arcade", "simulation"]
   }
 ];

@@ -38,10 +38,10 @@ export default defineConfig({
   server: {
     ...(process.env.NODE_ENV === "development"
       ? {
-        https: {
-          key: fs.readFileSync("./localhost-key.pem"),
-          cert: fs.readFileSync("./localhost.pem")
-        }
+        // https: {
+          // key: fs.readFileSync("./localhost-key.pem"),
+          // cert: fs.readFileSync("./localhost.pem")
+        // }
       } : {})
   }
 });
