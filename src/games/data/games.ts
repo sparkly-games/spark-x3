@@ -548,5 +548,23 @@ export const games: Game[] = [
     title: "Melon Playground",
     poster: "/images/games/melonplayground.png",
     tags: ["casual", "arcade", "simulation"]
+  },
+  {
+    id: "helix-jump",
+    title: "Helix Jump",
+    poster: "/images/games/helixjump.png",
+    tags: ["arcade", "casual"]
+  },
+  {
+    id: "endless-car-chase",
+    title: "Endless Car Chase",
+    poster: "/images/games/endlesscarchase.png",
+    tags: ["racing", "arcade"]
+  },
+  {
+    id: "ball-hop",
+    title: "Ball Hop",
+    poster: "/images/games/ballhop.png",
+    tags: ["arcade", "casual"]
   }
 ];
