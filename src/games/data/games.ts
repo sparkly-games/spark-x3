@@ -559,6 +559,7 @@ export const games: Game[] = [
     id: "endless-car-chase",
     title: "Endless Car Chase",
     poster: "/images/games/endlesscarchase.png",
+    broken: true,
     tags: ["racing", "arcade"]
   },
   {
