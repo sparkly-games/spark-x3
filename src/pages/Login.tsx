@@ -59,19 +59,16 @@ export default function Login() {
         <div
           style={{
             display: "flex",
-            justifyContent: "center",
-            marginBottom: "1rem",
+            justifyContent: "center"
           }}
         >
-          <ShieldX size={72} />
+          <img src="/banner.png" alt="Logo Banner" style={{ width: "auto", height: "200px" }} />
         </div>
-
-        <div className="brand-title">{SITE_NAME}</div>
         <div className="brand-subtitle">{ADMIN_NAME}</div>
 
-        <h1>Sign in</h1>
+        <div style={{ margin: "1rem" }} />
 
-        <p>This area is restricted to administrators.</p>
+        <p><code>This area is restricted to administrators.</code></p>
 
         <form className="login-form" onSubmit={login}>
           <input

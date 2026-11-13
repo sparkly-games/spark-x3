@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
 import Announcements from "./pages/Announcements";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -25,8 +24,7 @@ export default function App() {
             </ProtectedRoute>
           }
         >
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/moderation" element={<Moderation />} />
+          <Route path="/" element={<Moderation />} />
           <Route path="/announcements" element={<Announcements />} />
         </Route>
       </Routes>

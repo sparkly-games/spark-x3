@@ -13,19 +13,14 @@ import { SITE_NAME } from "../config";
 
 const navigation = [
   {
-    label: "Dashboard",
+    label: "Moderation",
     path: "/",
-    icon: LayoutDashboard,
+    icon: ShieldBan,
   },
   {
     label: "Announcements",
     path: "/announcements",
     icon: Megaphone,
-  },
-  {
-    label: "Moderation",
-    path: "/moderation",
-    icon: ShieldBan,
   }
 ];
 
@@ -38,7 +33,7 @@ export default function Layout() {
     <div className="admin-shell">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-title">{SITE_NAME}</div>
+          <img src="/banner.png" alt="Logo Banner" style={{ width: "auto", height: "100px" }} />
           <div className="brand-subtitle">{ADMIN_NAME}</div>
         </div>
 
