@@ -4,8 +4,7 @@ import { Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import { auth } from "../lib/firebase";
-import { ADMIN_NAME, SITE_NAME } from "../config";
-import { ShieldX } from "lucide-react";
+import { ADMIN_NAME } from "../config";
 
 export default function Login() {
   const [loading, setLoading] = useState(true);

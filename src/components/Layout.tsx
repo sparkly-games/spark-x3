@@ -1,5 +1,4 @@
 import {
-  LayoutDashboard,
   ShieldBan,
   LogOut,
   Megaphone
@@ -9,7 +8,6 @@ import { NavLink, Outlet } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../lib/firebase";
 import { ADMIN_NAME } from "../config";
-import { SITE_NAME } from "../config";
 
 const navigation = [
   {
