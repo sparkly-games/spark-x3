@@ -114,17 +114,17 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
 
           <button
             type="button"
-            title="Calculator"
-            aria-label="Calculator"
+            title="Sharkord"
+            aria-label="Sharkord"
             className="
               flex h-9 w-9 items-center justify-center
               rounded border border-zinc-700 bg-zinc-800
               text-zinc-300 transition
               hover:border-zinc-500 hover:bg-zinc-700 hover:text-white
             "
-            onClick={() => navigate("/smart-calculator")}
+            onClick={() => window.open("https://sharkord.sparkx3.lgbt.sh", "_blank", "noopener,noreferrer")}
           >
-            <Calculator size={18} />
+            <img src="/images/svg/sharkord.svg" alt="Sharkord" className="h-6 w-6" />
           </button>
         </div>
       </div>
