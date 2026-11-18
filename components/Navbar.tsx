@@ -1,5 +1,5 @@
 
-import { Calculator, Gamepad2, Headphones, Search, X } from "lucide-react";
+import { Gamepad2, Headphones, Search, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
