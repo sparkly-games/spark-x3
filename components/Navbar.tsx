@@ -1,5 +1,5 @@
 
-import { Gamepad2, Headphones, Search, X } from "lucide-react";
+import { CirclePlay, Headphones, MessageCircleMore, Search, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -95,38 +95,6 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
         </button>
 
         <div className="h-5 w-px bg-zinc-700 m-5" />
-
-        <div className="flex shrink-0 items-center gap-2">
-          <button
-            type="button"
-            title="Games"
-            aria-label="Games"
-            className="
-              flex h-9 w-9 items-center justify-center
-              rounded border border-zinc-700 bg-zinc-800
-              text-zinc-300 transition
-              hover:border-zinc-500 hover:bg-zinc-700 hover:text-white
-            "
-            onClick={() => navigate("/games")}
-          >
-            <Gamepad2 size={18} />
-          </button>
-
-          <button
-            type="button"
-            title="Sharkord"
-            aria-label="Sharkord"
-            className="
-              flex h-9 w-9 items-center justify-center
-              rounded border border-zinc-700 bg-zinc-800
-              text-zinc-300 transition
-              hover:border-zinc-500 hover:bg-zinc-700 hover:text-white
-            "
-            onClick={() => window.open("https://sharkord.sparkx3.lgbt.sh", "_blank", "noopener,noreferrer")}
-          >
-            <img src="/images/svg/sharkord.svg" alt="Sharkord" className="h-6 w-6" />
-          </button>
-        </div>
       </div>
 
       {/* Centre: Search */}
@@ -253,6 +221,43 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
           }}
         >
           <Headphones size={18} />
+        </button>
+
+        {/* Sharkord */}
+        <button
+          type="button"
+          title="Sharkord"
+          aria-label="Sharkord"
+          className={`
+            flex h-9 w-9 items-center justify-center
+            rounded border border-zinc-700 bg-zinc-800
+            text-zinc-300 transition
+          `}
+          onClick={() => {
+            window.open("https://sharkord.sparkx3.lgbt.sh/", "_blank", "noopener,noreferrer");
+          }}
+        >
+          <MessageCircleMore size={18} />
+        </button>
+
+        {/* Invidious */}
+        <button
+          disabled={true}
+          type="button"
+          title="Invidious"
+          aria-label="Invidious"
+          className={`
+            flex h-9 w-9 items-center justify-center
+            rounded border border-zinc-700 bg-zinc-800
+            text-zinc-300 transition
+            
+            cursor-not-allowed opacity-50
+          `}
+          onClick={() => {
+            window.open("https://invidious.sparkx3.lgbt.sh/", "_blank", "noopener,noreferrer");
+          }}
+        >
+          <CirclePlay size={18} />
         </button>
       </div>
     </nav>
