@@ -1,7 +1,6 @@
 
 import { CirclePlay, Headphones, MessageCircleMore, Search, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 import { useLanguage } from "../src/localisation/LanguageContext";
 import { langs } from "../src/localisation/create-lang";
@@ -15,7 +14,6 @@ interface NavbarProps {
 export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
   const { language, setLanguage, lang } = useLanguage();
   const strings = lang.src;
-  const navigate = useNavigate();
 
   const [search, setSearch] = useState("");
   const [languageOpen, setLanguageOpen] = useState(false);

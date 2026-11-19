@@ -4,6 +4,7 @@ import type { Game } from "../../types/game";
 import { useEffect, useState } from "react";
 import GameCard from "../GameCard/GameCard";
 import { useLanguage } from "../../../localisation/LanguageContext";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 interface Props {
   title: string;
@@ -29,12 +30,15 @@ export default function GameRow({ title, games }: Props) {
 
   return (
     <section className="mt-4">
-      <div className="mb-3 flex items-center justify-between">
+      <div className="mb-3 flex items-center">
+        {isCollapsed ? (
+          <ChevronRight size={20} className="text-sky-800 font-bold" />
+        ) : (
+          <ChevronDown size={20} className="text-sky-800 font-bold" />
+        )}
         <h2
           onClick={() => setIsCollapsed(!isCollapsed)}
           className="
-            border-l-4
-            border-blue-500
             pl-3
             text-xl
             font-bold
