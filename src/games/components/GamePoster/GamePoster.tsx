@@ -11,7 +11,7 @@ export default function GamePoster({ src, alt }: Props) {
   return (
     <img
       src={source}
-      onError={() => setSource("/posters/placeholder.png")}
+      onError={() => setSource("/images/games/ placeholder.webp")}
       alt={alt}
       loading="lazy"
       className="

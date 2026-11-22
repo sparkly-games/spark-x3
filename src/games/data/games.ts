@@ -415,14 +415,6 @@ export const games: Game[] = [
   },
 
   {
-    id: "hotline-miami",
-    title: "Hotline Miami",
-    poster: "/images/games/hotlinemiami.png",
-    broken: true,
-    tags: ["action", "arcade"]
-  },
-
-  {
     id: "small-world-cup",
     title: "A Small World Cup",
     poster: "/images/games/smallworldcup.png",
@@ -556,16 +548,35 @@ export const games: Game[] = [
     tags: ["arcade", "casual"]
   },
   {
-    id: "endless-car-chase",
-    title: "Endless Car Chase",
-    poster: "/images/games/endlesscarchase.png",
-    broken: true,
-    tags: ["racing", "arcade"]
-  },
-  {
     id: "ball-hop",
     title: "Ball Hop",
     poster: "/images/games/ballhop.png",
     tags: ["arcade", "casual"]
+  },
+  {
+    id: "fnaf/island",
+    title: "Five Nights at the Island",
+    poster: "/images/games/fnafisland.png",
+    tags: ["horror"]
+  },
+  {
+    id: "geometry-dash",
+    title: "Geometry Dash",
+    broken: true,
+    poster: "/images/games/geometrydash.png",
+    tags: ["arcade", "casual"]
+  },
+  {
+    id: "dta-6",
+    title: "DTA6",
+    poster: "/images/games/dta6.png",
+    tags: ["action", "arcade"]
+  },
+  {
+    id: "real-flight-sim",
+    title: "Real Flight Sim",
+    broken: true,
+    poster: "/images/games/realflightsim.png",
+    tags: ["simulation", "casual"]
   }
 ];

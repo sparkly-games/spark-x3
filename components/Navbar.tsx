@@ -1,6 +1,6 @@
 
-import { CirclePlay, Headphones, MessageCircleMore, Search, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { MessageCircleMore, Music, Search, X } from "lucide-react";
+import { useState } from "react";
 
 import { useLanguage } from "../src/localisation/LanguageContext";
 import { langs } from "../src/localisation/create-lang";
@@ -17,22 +17,6 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
 
   const [search, setSearch] = useState("");
   const [languageOpen, setLanguageOpen] = useState(false);
-  const [isMusicBlocked, setIsMusicBlocked] = useState(false);
-
-  useEffect(() => {
-    const checkMusicBlocked = async () => {
-      const blocked = await fetch("https://sc.bloat.cat/", {
-        method: "HEAD",
-        mode: "no-cors",
-      })
-        .then(() => false)
-        .catch(() => true);
-
-      setIsMusicBlocked(blocked);
-    };
-
-    checkMusicBlocked();
-  }, []);
 
   function handleSearch(value: string) {
     setSearch(value);
@@ -93,51 +77,7 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
         </button>
 
         <div className="h-5 w-px bg-zinc-700 m-5" />
-      </div>
 
-      {/* Centre: Search */}
-        <div
-          className={`
-            flex w-full min-w-0 items-center gap-2
-            ${showSearch ? "rounded-lg border border-zinc-700 bg-zinc-800" : ""}
-            px-3 py-2
-            focus-within:border-zinc-500
-          `}
-        >
-        {showSearch && (
-          <>
-          <Search size={17} className="shrink-0 text-zinc-500" />
-
-          <input
-            type="text"
-            value={search}
-            onChange={(event) => handleSearch(event.target.value)}
-            placeholder={strings.pages.home.searchPlaceholder}
-            className="
-              min-w-0 flex-1 bg-transparent
-              text-sm text-white outline-none
-              placeholder:text-zinc-500
-            "
-            aria-label="Search games"
-          />
-
-          {search && (
-            <button
-              type="button"
-              onClick={clearSearch}
-              className="shrink-0 text-zinc-500 transition hover:text-white"
-              aria-label="Clear search"
-            >
-              <X size={15} />
-            </button>
-          )}
-          </>
-        )}
-        </div>
-
-      {/* Right: Language and music */}
-      <div className="flex items-center gap-2 justify-self-end">
-        {/* Language */}
         <div className="relative">
           <button
             type="button"
@@ -197,10 +137,52 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
             </div>
           )}
         </div>
+      </div>
 
+      {/* Centre: Search */}
+        <div
+          className={`
+            flex w-full min-w-0 items-center gap-2
+            ${showSearch ? "rounded-lg border border-zinc-700 bg-zinc-800" : ""}
+            px-3 py-2
+            focus-within:border-zinc-500
+          `}
+        >
+        {showSearch && (
+          <>
+          <Search size={17} className="shrink-0 text-zinc-500" />
+
+          <input
+            type="text"
+            value={search}
+            onChange={(event) => handleSearch(event.target.value)}
+            placeholder={strings.pages.home.searchPlaceholder}
+            className="
+              min-w-0 flex-1 bg-transparent
+              text-sm text-white outline-none
+              placeholder:text-zinc-500
+            "
+            aria-label="Search games"
+          />
+
+          {search && (
+            <button
+              type="button"
+              onClick={clearSearch}
+              className="shrink-0 text-zinc-500 transition hover:text-white"
+              aria-label="Clear search"
+            >
+              <X size={15} />
+            </button>
+          )}
+          </>
+        )}
+        </div>
+
+      {/* Right: Language and music */}
+      <div className="flex items-center gap-2 justify-self-end">
         {/* Music */}
         <button
-          disabled={isMusicBlocked}
           type="button"
           title="Music"
           aria-label="Music"
@@ -208,17 +190,12 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
             flex h-9 w-9 items-center justify-center
             rounded border border-zinc-700 bg-zinc-800
             text-zinc-300 transition
-            ${
-              isMusicBlocked
-                ? "cursor-not-allowed opacity-50"
-                : "cursor-pointer hover:border-zinc-500 hover:bg-zinc-700 hover:text-white"
-            }
           `}
           onClick={() => {
-            window.open("https://sc.bloat.cat/", "_blank", "noopener,noreferrer");
+            window.open("https://lyra.sparkx3.lgbt.sh", "_blank", "noopener,noreferrer");
           }}
         >
-          <Headphones size={18} />
+          <Music size={18} />
         </button>
 
         {/* Sharkord */}
@@ -236,26 +213,6 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
           }}
         >
           <MessageCircleMore size={18} />
-        </button>
-
-        {/* Invidious */}
-        <button
-          disabled={true}
-          type="button"
-          title="Invidious"
-          aria-label="Invidious"
-          className={`
-            flex h-9 w-9 items-center justify-center
-            rounded border border-zinc-700 bg-zinc-800
-            text-zinc-300 transition
-            
-            cursor-not-allowed opacity-50
-          `}
-          onClick={() => {
-            window.open("https://invidious.sparkx3.lgbt.sh/", "_blank", "noopener,noreferrer");
-          }}
-        >
-          <CirclePlay size={18} />
         </button>
       </div>
     </nav>
