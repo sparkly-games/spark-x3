@@ -578,5 +578,11 @@ export const games: Game[] = [
     broken: true,
     poster: "/images/games/realflightsim.png",
     tags: ["simulation", "casual"]
+  },
+  {
+    id: "ragdoll/achievement",
+    title: "Ragdoll Achievement",
+    poster: "/images/games/ragdollachievement.png",
+    tags: ["physics", "arcade"]
   }
 ];
