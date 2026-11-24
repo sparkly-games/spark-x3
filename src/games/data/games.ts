@@ -562,7 +562,7 @@ export const games: Game[] = [
   {
     id: "geometry-dash",
     title: "Geometry Dash",
-    broken: true,
+    broken: true, // Game doesn't load.
     poster: "/images/games/geometrydash.png",
     tags: ["arcade", "casual"]
   },
@@ -575,7 +575,7 @@ export const games: Game[] = [
   {
     id: "real-flight-sim",
     title: "Real Flight Sim",
-    broken: true,
+    broken: true, // Mobile controls don't work.
     poster: "/images/games/realflightsim.png",
     tags: ["simulation", "casual"]
   },
@@ -588,6 +588,7 @@ export const games: Game[] = [
   {
     id: "chicken-cs",
     title: "Chicken CS",
+    broken: true, // Mobile controls don't work.
     poster: "/images/games/chickencs.png",
     tags: ["action", "arcade"]
   },
