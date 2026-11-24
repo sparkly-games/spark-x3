@@ -584,5 +584,17 @@ export const games: Game[] = [
     title: "Ragdoll Achievement",
     poster: "/images/games/ragdollachievement.png",
     tags: ["physics", "arcade"]
+  },
+  {
+    id: "chicken-cs",
+    title: "Chicken CS",
+    poster: "/images/games/chickencs.png",
+    tags: ["action", "arcade"]
+  },
+  {
+    id: "minesweeper",
+    title: "Minesweeper",
+    poster: "/images/games/minesweeper.png",
+    tags: ["puzzle", "casual", "brain-break"]
   }
 ];
