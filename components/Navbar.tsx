@@ -1,5 +1,5 @@
 
-import { MessageCircleMore, Music, Search, X } from "lucide-react";
+import { FishingHook, MessageCircleMore, Music, Search, X } from "lucide-react";
 import { useState } from "react";
 
 import { useLanguage } from "../src/localisation/LanguageContext";
@@ -181,6 +181,24 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
 
       {/* Right: Language and music */}
       <div className="flex items-center gap-2 justify-self-end">
+        {/* Krillion */}
+        <button
+          type="button"
+          title="Krillion"
+          aria-label="Krillion"
+          className={`
+            flex h-9 w-9 items-center justify-center
+            rounded border border-zinc-700 bg-zinc-800
+            text-zinc-300 transition
+          `}
+          onClick={() => {
+            window.open("https://krillion.sparkx3.lgbt.sh", "_blank", "noopener,noreferrer");
+          }}
+        >
+          <FishingHook size={18} />
+        </button>
+
+
         {/* Music */}
         <button
           type="button"
