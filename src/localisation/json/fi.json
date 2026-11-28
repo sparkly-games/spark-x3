@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "flag": "🇫🇮"
+    },
+    "tags": {
+        "action": "Toiminta",
+        "arcade": "Arcade",
+        "brain-break": "Aivotauko",
+        "casual": "Rento",
+        "clicker": "Klikkauspeli",
+        "cooking": "Ruoanlaitto",
+        "horror": "Kauhu",
+        "idle": "Idle",
+        "physics": "Fysiikka",
+        "platformer": "Tasohyppely",
+        "puzzle": "Pulmapeli",
+        "racing": "Ajopeli",
+        "simulation": "Simulaatio",
+        "sports": "Urheilu",
+        "strategy": "Strategia"
+    },
+    "pages": {
+        "home": {
+            "title": "Spark X3",
+            "games": "Pelit",
+            "subline": "Pelaa ilmaisia pelejä suoraan selaimessasi.",
+            "noGamesPrefix": "Ei pelejä haulle ",
+            "deviceReference": "Laitteen tunniste",
+            "deviceReferenceHelptext": "Anna tämä tunniste ylläpitäjälle, jos tarvitset apua.",
+            "doneModalButtonText": "Valmis",
+            "unlockBrokenGames": "Avaa rikkinäisten pelien lukitus",
+            "unlockBrokenGamesHelptext": "Syötä avauskoodi päästäksesi tilapäisesti käsiksi peleihin, jotka on merkitty rikkinäisiksi.",
+            "brokenGamesTextInputPlaceholder": "Syötä avauskoodi",
+            "unlockModalButtonText": "Avaa 6 tunniksi",
+            "unlockErrorNoCode": "Syötä avauskoodi.",
+            "unlockErrorInvalidCode": "Virheellinen avauskoodi.",
+            "searchResults": "Hakutulokset",
+            "close": "Sulje",
+            "searchPlaceholder": "Ragdoll Archers, Tiny Fishing, Cut the Rope..."
+        },
+        "play": {
+            "playingNow": "Pelataan nyt",
+            "loadingGameTextLine1": "Ladataan peliä",
+            "loadingGameTextLine2": "Odota hetki...",
+            "play": "Pelaa",
+            "broken": "Rikki"
+        },
+        "announcements": {
+            "label": "Tiedotteet",
+            "notAvailableInYourLocale": "Tiedotteet eivät ole saatavilla kielelläsi."
+        },
+        "banScreen": {
+            "title": "SPARK X3",
+            "accessControl": "Pääsynhallinta",
+            "accessRestricted": "Pääsy estetty",
+            "accessRestrictedSublineText": "Tämän laitteen pääsy Spark X3:een on estetty.",
+            "deviceReference": "Laitteen tunniste",
+            "reason": "Syy",
+            "reasonNotAvailable": "Eston syyt eivät ole saatavilla kielelläsi.",
+            "expires": "Päättyy",
+            "errorHelptextLong": "Jos uskot, että tämä rajoitus on asetettu virheellisesti, anna yllä oleva laitteen tunniste Spark X3:n ylläpitäjälle.",
+            "baselineBranding": "Spark X3"
+        }
+    },
+    "notAvailableInYourLocale": "Tämä sivu ei ole saatavilla kielelläsi."
+}

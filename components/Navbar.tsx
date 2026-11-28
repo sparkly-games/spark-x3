@@ -184,12 +184,15 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
         {/* Krillion */}
         <button
           type="button"
+          disabled
           title="Krillion"
           aria-label="Krillion"
           className={`
             flex h-9 w-9 items-center justify-center
             rounded border border-zinc-700 bg-zinc-800
             text-zinc-300 transition
+
+            disabled:cursor-not-allowed disabled:opacity-50
           `}
           onClick={() => {
             window.open("https://krillion.sparkx3.lgbt.sh", "_blank", "noopener,noreferrer");
@@ -208,6 +211,8 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
             flex h-9 w-9 items-center justify-center
             rounded border border-zinc-700 bg-zinc-800
             text-zinc-300 transition
+
+            disabled:cursor-not-allowed disabled:opacity-50
           `}
           onClick={() => {
             window.open("https://lyra.sparkx3.lgbt.sh", "_blank", "noopener,noreferrer");
@@ -225,6 +230,8 @@ export default function Navbar({ onSearch, ver, showSearch }: NavbarProps) {
             flex h-9 w-9 items-center justify-center
             rounded border border-zinc-700 bg-zinc-800
             text-zinc-300 transition
+
+            disabled:cursor-not-allowed disabled:opacity-50
           `}
           onClick={() => {
             window.open("https://sharkord.sparkx3.lgbt.sh/", "_blank", "noopener,noreferrer");

@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "flag": "🇳🇱"
+    },
+    "tags": {
+        "action": "Actie",
+        "arcade": "Arcade",
+        "brain-break": "Hersenpauze",
+        "casual": "Casual",
+        "clicker": "Clicker",
+        "cooking": "Koken",
+        "horror": "Horror",
+        "idle": "Idle",
+        "physics": "Fysica",
+        "platformer": "Platformer",
+        "puzzle": "Puzzel",
+        "racing": "Racen",
+        "simulation": "Simulatie",
+        "sports": "Sport",
+        "strategy": "Strategie"
+    },
+    "pages": {
+        "home": {
+            "title": "Spark X3",
+            "games": "Games",
+            "subline": "Speel gratis games direct in je browser.",
+            "noGamesPrefix": "Geen games gevonden voor ",
+            "deviceReference": "Apparaatreferentie",
+            "deviceReferenceHelptext": "Geef deze referentie door aan een beheerder als je hulp nodig hebt.",
+            "doneModalButtonText": "Klaar",
+            "unlockBrokenGames": "Defecte games ontgrendelen",
+            "unlockBrokenGamesHelptext": "Voer een ontgrendelcode in om tijdelijk toegang te krijgen tot games die als defect zijn gemarkeerd.",
+            "brokenGamesTextInputPlaceholder": "Voer ontgrendelcode in",
+            "unlockModalButtonText": "Ontgrendelen voor 6 uur",
+            "unlockErrorNoCode": "Voer een ontgrendelcode in.",
+            "unlockErrorInvalidCode": "Ongeldige ontgrendelcode.",
+            "searchResults": "Zoekresultaten",
+            "close": "Sluiten",
+            "searchPlaceholder": "Ragdoll Archers, Tiny Fishing, Cut the Rope..."
+        },
+        "play": {
+            "playingNow": "Nu aan het spelen",
+            "loadingGameTextLine1": "Game laden",
+            "loadingGameTextLine2": "Een ogenblik geduld...",
+            "play": "Spelen",
+            "broken": "Defect"
+        },
+        "announcements": {
+            "label": "Aankondigingen",
+            "notAvailableInYourLocale": "Aankondigingen zijn niet beschikbaar in jouw taal."
+        },
+        "banScreen": {
+            "title": "SPARK X3",
+            "accessControl": "Toegangscontrole",
+            "accessRestricted": "Toegang beperkt",
+            "accessRestrictedSublineText": "Dit apparaat heeft geen toegang meer tot Spark X3.",
+            "deviceReference": "Apparaatreferentie",
+            "reason": "Reden",
+            "reasonNotAvailable": "Redenen voor een blokkade zijn niet beschikbaar in jouw taal.",
+            "expires": "Verloopt",
+            "errorHelptextLong": "Denk je dat deze beperking ten onrechte is opgelegd? Geef dan de apparaatreferentie hierboven door aan een Spark X3-beheerder.",
+            "baselineBranding": "Spark X3"
+        }
+    },
+    "notAvailableInYourLocale": "Deze pagina is niet beschikbaar in jouw taal."
+}

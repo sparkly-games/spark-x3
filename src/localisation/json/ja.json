@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "flag": "🇯🇵"
+    },
+    "tags": {
+        "action": "アクション",
+        "arcade": "アーケード",
+        "brain-break": "気分転換",
+        "casual": "カジュアル",
+        "clicker": "クリッカー",
+        "cooking": "料理",
+        "horror": "ホラー",
+        "idle": "放置系",
+        "physics": "物理",
+        "platformer": "プラットフォーマー",
+        "puzzle": "パズル",
+        "racing": "レーシング",
+        "simulation": "シミュレーション",
+        "sports": "スポーツ",
+        "strategy": "ストラテジー"
+    },
+    "pages": {
+        "home": {
+            "title": "Spark X3",
+            "games": "ゲーム",
+            "subline": "ブラウザで無料ゲームを直接プレイできます。",
+            "noGamesPrefix": "ゲームが見つかりません: ",
+            "deviceReference": "デバイス参照ID",
+            "deviceReferenceHelptext": "サポートが必要な場合は、この参照IDを管理者にお伝えください。",
+            "doneModalButtonText": "完了",
+            "unlockBrokenGames": "動作不良ゲームのロック解除",
+            "unlockBrokenGamesHelptext": "ロック解除コードを入力すると、動作不良としてマークされているゲームに一時的にアクセスできます。",
+            "brokenGamesTextInputPlaceholder": "ロック解除コードを入力",
+            "unlockModalButtonText": "6時間ロック解除",
+            "unlockErrorNoCode": "ロック解除コードを入力してください。",
+            "unlockErrorInvalidCode": "ロック解除コードが無効です。",
+            "searchResults": "検索結果",
+            "close": "閉じる",
+            "searchPlaceholder": "Ragdoll Archers, Tiny Fishing, Cut the Rope..."
+        },
+        "play": {
+            "playingNow": "プレイ中",
+            "loadingGameTextLine1": "ゲームを読み込み中",
+            "loadingGameTextLine2": "しばらくお待ちください...",
+            "play": "プレイ",
+            "broken": "動作不良"
+        },
+        "announcements": {
+            "label": "お知らせ",
+            "notAvailableInYourLocale": "お知らせはお使いの言語ではご利用いただけません。"
+        },
+        "banScreen": {
+            "title": "SPARK X3",
+            "accessControl": "アクセス制御",
+            "accessRestricted": "アクセスが制限されています",
+            "accessRestrictedSublineText": "このデバイスは Spark X3 へのアクセスが制限されています。",
+            "deviceReference": "デバイス参照ID",
+            "reason": "理由",
+            "reasonNotAvailable": "制限の理由はお使いの言語ではご利用いただけません。",
+            "expires": "有効期限",
+            "errorHelptextLong": "この制限が誤りであると思われる場合は、上記のデバイス参照IDを Spark X3 の管理者にお伝えください。",
+            "baselineBranding": "Spark X3"
+        }
+    },
+    "notAvailableInYourLocale": "このページはお使いの言語ではご利用いただけません。"
+}
